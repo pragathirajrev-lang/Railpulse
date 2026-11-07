@@ -502,7 +502,7 @@ const App = {
             // High occupancy cards
             const highOccEl = document.getElementById('occupancy-high-cards');
             if (highOccEl) {
-                const highTrains = occs.filter(o => o.avgOccupancy >= 85).slice(0, 4);
+                const highTrains = occs.slice().sort((a, b) => b.avgOccupancy - a.avgOccupancy).slice(0, 4);
                 highOccEl.innerHTML = highTrains.map(t => `
                     <div class="col-md-6 mb-3">
                         <div class="p-3 border rounded bg-white shadow-sm">
@@ -523,13 +523,13 @@ const App = {
             // Underutilised cards
             const underOccEl = document.getElementById('occupancy-low-cards');
             if (underOccEl) {
-                const lowTrains = occs.filter(o => o.avgOccupancy < 60).slice(0, 4);
+                const lowTrains = occs.slice().sort((a, b) => a.avgOccupancy - b.avgOccupancy).slice(0, 4);
                 underOccEl.innerHTML = lowTrains.map(t => `
                     <div class="col-md-6 mb-3">
                         <div class="p-3 border rounded bg-white shadow-sm">
                             <div class="d-flex justify-content-between align-items-center mb-1">
                                 <h6 class="mb-0 fw-bold">${t.trainName} (${t.trainId})</h6>
-                                <span class="badge-occupancy low">${t.avgOccupancy}%</span>
+                                <span class="badge-occupancy ${t.avgOccupancy < 50 ? 'low' : (t.avgOccupancy <= 75 ? 'moderate' : 'high')}">${t.avgOccupancy}%</span>
                             </div>
                             <small class="text-muted d-block mb-2">${t.route} &bull; ${t.category}</small>
                             <div class="d-flex justify-content-between text-muted small">

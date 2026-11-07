@@ -27,12 +27,12 @@ public class RecommendationService {
 
         // Rule 1: High Occupancy / Overcrowding Warning
         for (OccupancyStatistics occ : occupancies) {
-            if (occ.getAvgOccupancy() >= 88.0) {
+            if (occ.getAvgOccupancy() >= 85.0) {
                 recommendations.add(new Recommendation(
                         "REC-ENG-" + (recId++),
                         "Augment Coach Capacity on High-Demand Corridor",
                         occ.getTrainName() + " (" + occ.getTrainId() + ")",
-                        "Average train occupancy has reached critical levels (" + occ.getAvgOccupancy() + "%). Risk of passenger overcrowding and waiting list backlogs.",
+                        "Average train occupancy has reached critical saturation (" + occ.getAvgOccupancy() + "%). Risk of passenger overcrowding and waiting list backlogs.",
                         "Average occupancy: " + occ.getAvgOccupancy() + "%, Avg daily passengers: " + occ.getAvgPassengers() + " vs capacity: " + occ.getAvgCapacity(),
                         "Review feasibility of attaching 2-3 additional coaches (Sleeper/3AC) or scheduling duplicate bi-weekly service during peak travel windows.",
                         "HIGH",
@@ -43,14 +43,14 @@ public class RecommendationService {
 
         // Rule 2: Low Utilization / Under-Occupancy Warning
         for (OccupancyStatistics occ : occupancies) {
-            if (occ.getAvgOccupancy() < 60.0) {
+            if (occ.getAvgOccupancy() < 70.0) {
                 recommendations.add(new Recommendation(
                         "REC-ENG-" + (recId++),
                         "Evaluate Train Capacity and Timetable Rationalization",
                         occ.getTrainName() + " (" + occ.getTrainId() + ")",
-                        "Consistently low passenger occupancy observed below 60%. Coach assets and traction power are currently underutilized.",
+                        "Consistently lower passenger occupancy observed (" + occ.getAvgOccupancy() + "%). Coach assets and traction power are currently underutilized.",
                         "Average occupancy: " + occ.getAvgOccupancy() + "%, Avg passengers: " + occ.getAvgPassengers() + " / Capacity: " + occ.getAvgCapacity(),
-                        "Review rake composition, detach unreserved surplus coaches for reallocation to busier corridors, and consider dynamic fare pricing to spur mid-week ridership.",
+                        "Review rake composition, detach unreserved surplus coaches for reallocation to busier corridors, and consider dynamic promotional pricing to spur ridership.",
                         "MEDIUM",
                         "UTILISATION"
                 ));
@@ -59,12 +59,12 @@ public class RecommendationService {
 
         // Rule 3: High Delay / Congestion Pattern
         for (DelayStatistics d : delays) {
-            if (d.getAvgDelay() >= 35.0) {
+            if (d.getAvgDelay() >= 25.0) {
                 recommendations.add(new Recommendation(
                         "REC-ENG-" + (recId++),
                         "Operational Timetable and Track Priority Investigation",
                         d.getTrainName() + " (" + d.getRoute() + ")",
-                        "Persistent operational delays observed with an average delay of " + d.getAvgDelay() + " minutes and low punctuality rate (" + d.getPunctualityRate() + "%).",
+                        "Persistent operational delays observed with an average delay of " + d.getAvgDelay() + " minutes and punctuality rate (" + d.getPunctualityRate() + "%).",
                         "Average delay: " + d.getAvgDelay() + " mins, Maximum recorded delay: " + d.getMaxDelay() + " mins across " + d.getTotalTrips() + " trips.",
                         "Conduct section-wise speed restriction audit, review terminal platform turnaround margins, and prioritize sectional signaling clearance.",
                         "HIGH",
@@ -75,7 +75,7 @@ public class RecommendationService {
 
         // Rule 4: Growing Demand Routes
         for (RouteStatistics r : routes) {
-            if ("INCREASING".equalsIgnoreCase(r.getTrend()) && r.getAvgOccupancy() > 80.0) {
+            if (r.getAvgOccupancy() > 65.0) {
                 recommendations.add(new Recommendation(
                         "REC-ENG-" + (recId++),
                         "Strategic Monitoring for Long-Term Capacity Expansion",
