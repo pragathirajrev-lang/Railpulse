@@ -333,9 +333,86 @@ def generate_report():
         r_a.font.size = Pt(10)
         r_a.font.color.rgb = RGBColor(51, 65, 85)
 
+    # -------------------------------------------------------------
+    # 7. MAJOR ENGINEERING CHALLENGES & HOW WE SOLVED THEM
+    # -------------------------------------------------------------
+    doc.add_page_break()
+    doc.add_heading("7. Major Engineering Challenges & Implemented Solutions", level=1)
+    
+    challenges = [
+        ("Challenge 1: Missing October-December Bars in Seasonality Analytics",
+         "Initial Problem: The initial prototype dataset had only 7,500 records. Because 28 express corridors operated daily, the records were exhausted after 267 days (7,500 / 28 = 267.8), ending on September 24. This caused Q4 (October to December) to show zero values.\n"
+         "Implemented Fix: We engineered a complete 366-day leap year dataset generator yielding exactly 10,248 rows (366 days x 28 corridors). All 12 calendar months now display realistic passenger distributions with festival surges in October and November."),
+
+        ("Challenge 2: Native Windows Execution of Apache Spark",
+         "Initial Problem: Apache Spark is natively designed for Linux/Unix and relies on POSIX file system permissions and winutils binary. Running Spark locally on Windows resulted in IOException: Could not locate executable null\\bin\\winutils.exe.\n"
+         "Implemented Fix: We integrated Apache Hadoop 3.3.5 Windows native binaries (winutils.exe and hadoop.dll) into hadoop/bin/ and programmatically set the hadoop.home.dir system property in SparkConfig.java on application startup."),
+
+        ("Challenge 3: Java 21 LTS Strong Encapsulation & Spark Unsafe Memory",
+         "Initial Problem: Java 21 enforces strict internal module encapsulation (JEP 396/403). Apache Spark 3.5.1 uses direct memory reflection for off-heap buffers, which threw InaccessibleObjectException crashes under default Java 21 flags.\n"
+         "Implemented Fix: We configured targeted JVM options (--add-opens for java.base/java.lang, java.base/java.nio, and java.base/sun.nio.ch) inside run.ps1, allowing Spark to achieve maximum memory throughput on modern Java 21 LTS without security warnings."),
+
+        ("Challenge 4: Resilient Database Connectivity with Zero Crash Fallback",
+         "Initial Problem: If an evaluator or examiner runs the project on a machine where MySQL Server 8.x is stopped, the Spring Boot application would fail to boot.\n"
+         "Implemented Fix: In DatabaseConfig.java, we implemented an intelligent health probe. The application attempts a connection to MySQL with a 2-second timeout. If unreachable, it seamlessly initializes an embedded in-memory H2 database in MySQL compatibility mode, ensuring zero startup failure."),
+
+        ("Challenge 5: GitHub 100 MB Large File Push Protection",
+         "Initial Problem: The compiled Spring Boot fat JAR (target/railway-spark-analytics-1.0.0.jar) measures 310 MB because it packages Spark, Scala, and embedded Tomcat. Pushing this to GitHub would cause rejection with error GH001 (files > 100 MB).\n"
+         "Implemented Fix: We configured .gitignore to strictly exclude target/ and *.jar, keeping the GitHub repository clean, lightweight, and fast to clone.")
+    ]
+
+    for title, desc in challenges:
+        p = doc.add_paragraph()
+        r_t = p.add_run(f"{title}\n")
+        r_t.font.bold = True
+        r_t.font.size = Pt(10.5)
+        r_t.font.color.rgb = RGBColor(180, 83, 9)
+        r_d = p.add_run(desc)
+        r_d.font.size = Pt(9.5)
+        r_d.font.color.rgb = RGBColor(30, 41, 59)
+
+    # -------------------------------------------------------------
+    # 8. TEAM ROLE DISTRIBUTION
+    # -------------------------------------------------------------
+    doc.add_heading("8. Team Role Distribution & Contribution Mapping", level=1)
+    doc.add_paragraph(
+        "To ensure structured presentation during technical project defense, responsibilities across the team are mapped as follows:"
+    )
+
+    roles_data = [
+        ("Member 1: Big Data & Spark Core Engineer",
+         "Responsible for local SparkSession configuration, Hadoop winutils emulation, DataFrame aggregations, and Spark Catalyst Profiler internals."),
+        ("Member 2: Machine Learning & Predictive Analytics",
+         "Responsible for Spark MLlib RandomForestRegressor pipeline, VectorAssembler feature engineering, chronological train/test split, and MAE/RMSE/R2 evaluation."),
+        ("Member 3: Backend REST API & Database Architect",
+         "Responsible for Spring Boot 3.2.5 REST endpoints, relational schema design, MySQL/H2 failover connection manager, and CSV 13-column schema validator."),
+        ("Member 4: Full-Stack Frontend & Data Visualization",
+         "Responsible for Single Page Application dashboard UI, Chart.js 4.4 interactive charts, 130% presentation zoom switcher, and What-If scenario simulator.")
+    ]
+
+    for r_title, r_desc in roles_data:
+        p = doc.add_paragraph(style='List Bullet')
+        r1 = p.add_run(f"{r_title}: ")
+        r1.font.bold = True
+        p.add_run(r_desc)
+
+    # -------------------------------------------------------------
+    # 9. REPOSITORY & RUN INSTRUCTIONS
+    # -------------------------------------------------------------
+    doc.add_heading("9. Repository & Execution Quick Start", level=1)
+    doc.add_paragraph(
+        "The entire codebase, datasets, and documentation are publicly hosted on GitHub at:\n"
+        "https://github.com/pragathirajrev-lang/Railpulse\n\n"
+        "Execution Steps:\n"
+        "1. Clone the repository: git clone https://github.com/pragathirajrev-lang/Railpulse.git\n"
+        "2. Launch application: .\\run.ps1\n"
+        "3. Navigate to: http://localhost:8080 in any web browser."
+    )
+
     output_filename = "Railway_Analytics_Project_Report.docx"
     doc.save(output_filename)
     print(f"SUCCESS: Generated {output_filename} successfully!")
 
 if __name__ == "__main__":
     generate_report()
+
