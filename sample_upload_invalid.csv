@@ -1,0 +1,8 @@
+record_id,train_id,train_name,source_station,destination_station,travel_date,passenger_count,train_capacity,delay_minutes,distance_km,day_of_week,month,train_category
+REC-90001,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-01,1050,1200,15,2400,Monday,January,Superfast
+REC-90002,,Corrupted Train Name,Delhi,Bengaluru,2024-01-01,950,1200,20,2400,Monday,January,Superfast
+REC-90003,TR-12007,Shatabdi Express,Chennai,Bengaluru,INVALID_DATE,800,900,10,360,Monday,January,Shatabdi
+REC-90001,TR-12008,Duplicate Record ID,Bengaluru,Chennai,2024-01-01,750,900,5,360,Monday,January,Shatabdi
+REC-90005,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-01,-250,1128,0,500,Monday,January,Vande Bharat
+REC-90006,TR-20608,Vande Bharat Express,Mysuru,Chennai,2024-01-01,1020,0,12,500,Monday,January,Vande Bharat
+

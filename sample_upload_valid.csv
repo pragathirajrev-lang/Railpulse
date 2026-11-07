@@ -1,0 +1,1001 @@
+record_id,train_id,train_name,source_station,destination_station,travel_date,passenger_count,train_capacity,delay_minutes,distance_km,day_of_week,month,train_category
+REC-10001,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-01,1057,1200,30,2400,Monday,January,Superfast
+REC-10002,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-01,1142,1300,59,2400,Monday,January,Superfast
+REC-10003,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-01,798,900,45,360,Monday,January,Shatabdi
+REC-10004,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-01,982,1000,14,360,Monday,January,Shatabdi
+REC-10005,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-01,1064,1178,5,500,Monday,January,Vande Bharat
+REC-10006,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-01,1077,1228,2,500,Monday,January,Vande Bharat
+REC-10007,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-01,1207,1400,23,1280,Monday,January,Superfast
+REC-10008,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-01,1162,1350,29,1280,Monday,January,Superfast
+REC-10009,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-01,1034,1150,40,1380,Monday,January,Rajdhani
+REC-10010,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-01,901,1050,20,1380,Monday,January,Rajdhani
+REC-10011,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-01,1230,1350,6,620,Monday,January,Express
+REC-10012,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-01,1082,1300,10,620,Monday,January,Express
+REC-10013,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-01,1266,1500,65,1950,Monday,January,Superfast
+REC-10014,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-01,1297,1450,12,1950,Monday,January,Superfast
+REC-10015,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-01,1014,1200,31,1140,Monday,January,Express
+REC-10016,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-01,968,1200,8,1140,Monday,January,Express
+REC-10017,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-01,923,1100,17,590,Monday,January,Express
+REC-10018,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-01,949,1150,4,590,Monday,January,Express
+REC-10019,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-01,1216,1350,6,350,Monday,January,Superfast
+REC-10020,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-01,1124,1350,4,350,Monday,January,Superfast
+REC-10021,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-01,1011,1250,12,490,Monday,January,Express
+REC-10022,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-01,1056,1250,159,490,Monday,January,Express
+REC-10023,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-01,893,950,12,140,Monday,January,Shatabdi
+REC-10024,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-01,808,950,7,140,Monday,January,Shatabdi
+REC-10025,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-01,871,1000,2,190,Monday,January,Superfast
+REC-10026,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-01,876,1050,112,190,Monday,January,Superfast
+REC-10027,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-01,1337,1480,9,1660,Monday,January,Superfast
+REC-10028,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-01,1173,1480,15,1660,Monday,January,Superfast
+REC-10029,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-02,1017,1250,76,2400,Tuesday,January,Superfast
+REC-10030,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-02,1002,1250,1,2400,Tuesday,January,Superfast
+REC-10031,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-02,774,900,64,360,Tuesday,January,Shatabdi
+REC-10032,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-02,702,900,10,360,Tuesday,January,Shatabdi
+REC-10033,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-02,941,1128,15,500,Tuesday,January,Vande Bharat
+REC-10034,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-02,994,1128,36,500,Tuesday,January,Vande Bharat
+REC-10035,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-02,1124,1400,8,1280,Tuesday,January,Superfast
+REC-10036,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-02,1085,1400,72,1280,Tuesday,January,Superfast
+REC-10037,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-02,816,1050,33,1380,Tuesday,January,Rajdhani
+REC-10038,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-02,934,1100,106,1380,Tuesday,January,Rajdhani
+REC-10039,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-02,993,1350,22,620,Tuesday,January,Express
+REC-10040,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-02,968,1250,87,620,Tuesday,January,Express
+REC-10041,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-02,1098,1400,31,1950,Tuesday,January,Superfast
+REC-10042,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-02,1122,1500,122,1950,Tuesday,January,Superfast
+REC-10043,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-02,894,1200,8,1140,Tuesday,January,Express
+REC-10044,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-02,919,1200,16,1140,Tuesday,January,Express
+REC-10045,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-02,971,1200,0,590,Tuesday,January,Express
+REC-10046,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-02,922,1150,12,590,Tuesday,January,Express
+REC-10047,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-02,1126,1400,8,350,Tuesday,January,Superfast
+REC-10048,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-02,1007,1400,2,350,Tuesday,January,Superfast
+REC-10049,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-02,939,1300,35,490,Tuesday,January,Express
+REC-10050,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-02,893,1200,89,490,Tuesday,January,Express
+REC-10051,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-02,726,950,6,140,Tuesday,January,Shatabdi
+REC-10052,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-02,706,900,10,140,Tuesday,January,Shatabdi
+REC-10053,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-02,767,950,2,190,Tuesday,January,Superfast
+REC-10054,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-02,675,950,69,190,Tuesday,January,Superfast
+REC-10055,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-02,1129,1480,8,1660,Tuesday,January,Superfast
+REC-10056,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-02,1091,1380,4,1660,Tuesday,January,Superfast
+REC-10057,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-03,1000,1250,58,2400,Wednesday,January,Superfast
+REC-10058,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-03,847,1200,119,2400,Wednesday,January,Superfast
+REC-10059,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-03,778,1000,3,360,Wednesday,January,Shatabdi
+REC-10060,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-03,838,1000,7,360,Wednesday,January,Shatabdi
+REC-10061,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-03,1025,1178,77,500,Wednesday,January,Vande Bharat
+REC-10062,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-03,1041,1228,4,500,Wednesday,January,Vande Bharat
+REC-10063,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-03,1060,1300,10,1280,Wednesday,January,Superfast
+REC-10064,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-03,1013,1400,10,1280,Wednesday,January,Superfast
+REC-10065,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-03,908,1050,49,1380,Wednesday,January,Rajdhani
+REC-10066,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-03,909,1150,37,1380,Wednesday,January,Rajdhani
+REC-10067,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-03,1019,1300,15,620,Wednesday,January,Express
+REC-10068,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-03,997,1250,0,620,Wednesday,January,Express
+REC-10069,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-03,1187,1500,41,1950,Wednesday,January,Superfast
+REC-10070,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-03,1043,1400,3,1950,Wednesday,January,Superfast
+REC-10071,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-03,988,1250,7,1140,Wednesday,January,Express
+REC-10072,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-03,928,1200,10,1140,Wednesday,January,Express
+REC-10073,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-03,883,1200,13,590,Wednesday,January,Express
+REC-10074,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-03,865,1150,12,590,Wednesday,January,Express
+REC-10075,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-03,1068,1400,13,350,Wednesday,January,Superfast
+REC-10076,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-03,977,1350,7,350,Wednesday,January,Superfast
+REC-10077,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-03,954,1300,12,490,Wednesday,January,Express
+REC-10078,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-03,941,1200,11,490,Wednesday,January,Express
+REC-10079,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-03,705,850,11,140,Wednesday,January,Shatabdi
+REC-10080,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-03,720,850,4,140,Wednesday,January,Shatabdi
+REC-10081,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-03,795,1000,40,190,Wednesday,January,Superfast
+REC-10082,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-03,757,1050,13,190,Wednesday,January,Superfast
+REC-10083,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-03,1094,1380,1,1660,Wednesday,January,Superfast
+REC-10084,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-03,1091,1430,33,1660,Wednesday,January,Superfast
+REC-10085,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-04,1067,1200,55,2400,Thursday,January,Superfast
+REC-10086,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-04,1176,1300,61,2400,Thursday,January,Superfast
+REC-10087,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-04,919,950,3,360,Thursday,January,Shatabdi
+REC-10088,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-04,925,950,14,360,Thursday,January,Shatabdi
+REC-10089,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-04,1208,1228,23,500,Thursday,January,Vande Bharat
+REC-10090,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-04,1071,1228,47,500,Thursday,January,Vande Bharat
+REC-10091,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-04,1170,1400,11,1280,Thursday,January,Superfast
+REC-10092,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-04,1224,1350,7,1280,Thursday,January,Superfast
+REC-10093,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-04,976,1050,31,1380,Thursday,January,Rajdhani
+REC-10094,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-04,1083,1100,63,1380,Thursday,January,Rajdhani
+REC-10095,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-04,983,1250,30,620,Thursday,January,Express
+REC-10096,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-04,1148,1300,11,620,Thursday,January,Express
+REC-10097,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-04,1215,1400,19,1950,Thursday,January,Superfast
+REC-10098,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-04,1294,1450,54,1950,Thursday,January,Superfast
+REC-10099,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-04,1022,1200,14,1140,Thursday,January,Express
+REC-10100,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-04,1114,1300,2,1140,Thursday,January,Express
+REC-10101,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-04,920,1150,59,590,Thursday,January,Express
+REC-10102,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-04,1043,1150,4,590,Thursday,January,Express
+REC-10103,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-04,1227,1350,38,350,Thursday,January,Superfast
+REC-10104,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-04,1123,1400,14,350,Thursday,January,Superfast
+REC-10105,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-04,1023,1300,68,490,Thursday,January,Express
+REC-10106,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-04,1084,1200,13,490,Thursday,January,Express
+REC-10107,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-04,847,950,11,140,Thursday,January,Shatabdi
+REC-10108,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-04,823,900,45,140,Thursday,January,Shatabdi
+REC-10109,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-04,822,950,15,190,Thursday,January,Superfast
+REC-10110,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-04,895,1050,68,190,Thursday,January,Superfast
+REC-10111,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-04,1117,1380,17,1660,Thursday,January,Superfast
+REC-10112,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-04,1289,1430,26,1660,Thursday,January,Superfast
+REC-10113,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-05,1134,1200,22,2400,Friday,January,Superfast
+REC-10114,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-05,1285,1300,14,2400,Friday,January,Superfast
+REC-10115,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-05,1026,950,7,360,Friday,January,Shatabdi
+REC-10116,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-05,959,900,14,360,Friday,January,Shatabdi
+REC-10117,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-05,1218,1128,2,500,Friday,January,Vande Bharat
+REC-10118,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-05,1218,1128,2,500,Friday,January,Vande Bharat
+REC-10119,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-05,1334,1400,3,1280,Friday,January,Superfast
+REC-10120,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-05,1418,1400,89,1280,Friday,January,Superfast
+REC-10121,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-05,1242,1150,24,1380,Friday,January,Rajdhani
+REC-10122,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-05,1162,1100,30,1380,Friday,January,Rajdhani
+REC-10123,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-05,1299,1300,6,620,Friday,January,Express
+REC-10124,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-05,1269,1300,10,620,Friday,January,Express
+REC-10125,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-05,1395,1500,14,1950,Friday,January,Superfast
+REC-10126,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-05,1372,1450,23,1950,Friday,January,Superfast
+REC-10127,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-05,1209,1250,32,1140,Friday,January,Express
+REC-10128,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-05,1206,1200,85,1140,Friday,January,Express
+REC-10129,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-05,1205,1200,13,590,Friday,January,Express
+REC-10130,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-05,1129,1200,4,590,Friday,January,Express
+REC-10131,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-05,1369,1350,26,350,Friday,January,Superfast
+REC-10132,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-05,1411,1350,37,350,Friday,January,Superfast
+REC-10133,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-05,1227,1200,46,490,Friday,January,Express
+REC-10134,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-05,1374,1300,39,490,Friday,January,Express
+REC-10135,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-05,972,900,15,140,Friday,January,Shatabdi
+REC-10136,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-05,972,900,9,140,Friday,January,Shatabdi
+REC-10137,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-05,936,1000,7,190,Friday,January,Superfast
+REC-10138,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-05,978,950,15,190,Friday,January,Superfast
+REC-10139,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-05,1491,1480,11,1660,Friday,January,Superfast
+REC-10140,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-05,1275,1380,4,1660,Friday,January,Superfast
+REC-10141,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-06,1268,1250,31,2400,Saturday,January,Superfast
+REC-10142,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-06,1228,1300,41,2400,Saturday,January,Superfast
+REC-10143,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-06,1080,1000,5,360,Saturday,January,Shatabdi
+REC-10144,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-06,928,900,164,360,Saturday,January,Shatabdi
+REC-10145,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-06,1253,1228,7,500,Saturday,January,Vande Bharat
+REC-10146,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-06,1286,1228,44,500,Saturday,January,Vande Bharat
+REC-10147,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-06,1402,1350,43,1280,Saturday,January,Superfast
+REC-10148,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-06,1351,1300,10,1280,Saturday,January,Superfast
+REC-10149,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-06,1242,1150,9,1380,Saturday,January,Rajdhani
+REC-10150,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-06,1111,1050,32,1380,Saturday,January,Rajdhani
+REC-10151,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-06,1404,1300,71,620,Saturday,January,Express
+REC-10152,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-06,1324,1350,5,620,Saturday,January,Express
+REC-10153,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-06,1411,1500,13,1950,Saturday,January,Superfast
+REC-10154,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-06,1384,1450,145,1950,Saturday,January,Superfast
+REC-10155,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-06,1223,1250,19,1140,Saturday,January,Express
+REC-10156,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-06,1138,1200,13,1140,Saturday,January,Express
+REC-10157,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-06,1178,1200,1,590,Saturday,January,Express
+REC-10158,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-06,1157,1100,1,590,Saturday,January,Express
+REC-10159,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-06,1421,1450,82,350,Saturday,January,Superfast
+REC-10160,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-06,1460,1450,10,350,Saturday,January,Superfast
+REC-10161,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-06,1373,1300,4,490,Saturday,January,Express
+REC-10162,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-06,1229,1300,3,490,Saturday,January,Express
+REC-10163,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-06,918,850,8,140,Saturday,January,Shatabdi
+REC-10164,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-06,918,850,74,140,Saturday,January,Shatabdi
+REC-10165,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-06,1014,950,12,190,Saturday,January,Superfast
+REC-10166,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-06,886,950,6,190,Saturday,January,Superfast
+REC-10167,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-06,1331,1380,17,1660,Saturday,January,Superfast
+REC-10168,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-06,1381,1430,11,1660,Saturday,January,Superfast
+REC-10169,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-07,1222,1200,12,2400,Sunday,January,Superfast
+REC-10170,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-07,1294,1200,136,2400,Sunday,January,Superfast
+REC-10171,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-07,972,900,160,360,Sunday,January,Shatabdi
+REC-10172,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-07,1080,1000,59,360,Sunday,January,Shatabdi
+REC-10173,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-07,1272,1178,59,500,Sunday,January,Vande Bharat
+REC-10174,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-07,1326,1228,33,500,Sunday,January,Vande Bharat
+REC-10175,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-07,1335,1300,45,1280,Sunday,January,Superfast
+REC-10176,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-07,1380,1400,110,1280,Sunday,January,Superfast
+REC-10177,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-07,1152,1100,41,1380,Sunday,January,Rajdhani
+REC-10178,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-07,1067,1050,61,1380,Sunday,January,Rajdhani
+REC-10179,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-07,1309,1250,3,620,Sunday,January,Express
+REC-10180,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-07,1448,1350,30,620,Sunday,January,Express
+REC-10181,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-07,1412,1400,13,1950,Sunday,January,Superfast
+REC-10182,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-07,1332,1400,0,1950,Sunday,January,Superfast
+REC-10183,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-07,1367,1300,14,1140,Sunday,January,Express
+REC-10184,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-07,1338,1300,12,1140,Sunday,January,Express
+REC-10185,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-07,1278,1200,7,590,Sunday,January,Express
+REC-10186,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-07,1091,1150,7,590,Sunday,January,Express
+REC-10187,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-07,1501,1400,13,350,Sunday,January,Superfast
+REC-10188,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-07,1366,1450,110,350,Sunday,January,Superfast
+REC-10189,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-07,1243,1300,13,490,Sunday,January,Express
+REC-10190,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-07,1192,1200,12,490,Sunday,January,Express
+REC-10191,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-07,854,850,35,140,Sunday,January,Shatabdi
+REC-10192,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-07,906,850,6,140,Sunday,January,Shatabdi
+REC-10193,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-07,981,950,15,190,Sunday,January,Superfast
+REC-10194,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-07,1050,1050,20,190,Sunday,January,Superfast
+REC-10195,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-07,1559,1480,8,1660,Sunday,January,Superfast
+REC-10196,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-07,1375,1380,12,1660,Sunday,January,Superfast
+REC-10197,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-08,1022,1200,22,2400,Monday,January,Superfast
+REC-10198,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-08,993,1250,13,2400,Monday,January,Superfast
+REC-10199,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-08,825,950,5,360,Monday,January,Shatabdi
+REC-10200,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-08,879,900,9,360,Monday,January,Shatabdi
+REC-10201,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-08,1059,1228,71,500,Monday,January,Vande Bharat
+REC-10202,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-08,1017,1178,89,500,Monday,January,Vande Bharat
+REC-10203,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-08,1173,1400,4,1280,Monday,January,Superfast
+REC-10204,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-08,1228,1400,12,1280,Monday,January,Superfast
+REC-10205,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-08,1025,1100,52,1380,Monday,January,Rajdhani
+REC-10206,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-08,940,1050,7,1380,Monday,January,Rajdhani
+REC-10207,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-08,1118,1250,6,620,Monday,January,Express
+REC-10208,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-08,1085,1350,0,620,Monday,January,Express
+REC-10209,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-08,1329,1500,24,1950,Monday,January,Superfast
+REC-10210,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-08,1275,1400,76,1950,Monday,January,Superfast
+REC-10211,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-08,1073,1300,0,1140,Monday,January,Express
+REC-10212,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-08,952,1200,56,1140,Monday,January,Express
+REC-10213,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-08,953,1150,4,590,Monday,January,Express
+REC-10214,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-08,961,1150,66,590,Monday,January,Express
+REC-10215,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-08,1150,1350,0,350,Monday,January,Superfast
+REC-10216,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-08,1196,1450,44,350,Monday,January,Superfast
+REC-10217,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-08,1086,1250,85,490,Monday,January,Express
+REC-10218,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-08,1083,1300,5,490,Monday,January,Express
+REC-10219,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-08,836,900,2,140,Monday,January,Shatabdi
+REC-10220,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-08,816,900,15,140,Monday,January,Shatabdi
+REC-10221,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-08,754,950,14,190,Monday,January,Superfast
+REC-10222,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-08,776,950,16,190,Monday,January,Superfast
+REC-10223,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-08,1276,1430,10,1660,Monday,January,Superfast
+REC-10224,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-08,1258,1380,63,1660,Monday,January,Superfast
+REC-10225,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-09,1008,1300,111,2400,Tuesday,January,Superfast
+REC-10226,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-09,973,1200,32,2400,Tuesday,January,Superfast
+REC-10227,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-09,824,1000,26,360,Tuesday,January,Shatabdi
+REC-10228,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-09,736,950,12,360,Tuesday,January,Shatabdi
+REC-10229,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-09,940,1228,39,500,Tuesday,January,Vande Bharat
+REC-10230,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-09,891,1128,7,500,Tuesday,January,Vande Bharat
+REC-10231,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-09,1034,1300,72,1280,Tuesday,January,Superfast
+REC-10232,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-09,1065,1350,19,1280,Tuesday,January,Superfast
+REC-10233,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-09,921,1100,68,1380,Tuesday,January,Rajdhani
+REC-10234,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-09,824,1050,8,1380,Tuesday,January,Rajdhani
+REC-10235,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-09,1100,1350,8,620,Tuesday,January,Express
+REC-10236,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-09,1105,1350,19,620,Tuesday,January,Express
+REC-10237,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-09,1161,1500,1,1950,Tuesday,January,Superfast
+REC-10238,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-09,1056,1450,8,1950,Tuesday,January,Superfast
+REC-10239,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-09,971,1250,34,1140,Tuesday,January,Express
+REC-10240,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-09,1015,1250,31,1140,Tuesday,January,Express
+REC-10241,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-09,892,1100,2,590,Tuesday,January,Express
+REC-10242,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-09,839,1150,7,590,Tuesday,January,Express
+REC-10243,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-09,1003,1400,30,350,Tuesday,January,Superfast
+REC-10244,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-09,1122,1400,0,350,Tuesday,January,Superfast
+REC-10245,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-09,988,1250,42,490,Tuesday,January,Express
+REC-10246,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-09,901,1250,44,490,Tuesday,January,Express
+REC-10247,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-09,674,850,9,140,Tuesday,January,Shatabdi
+REC-10248,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-09,763,950,19,140,Tuesday,January,Shatabdi
+REC-10249,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-09,724,950,9,190,Tuesday,January,Superfast
+REC-10250,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-09,781,1000,48,190,Tuesday,January,Superfast
+REC-10251,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-09,1098,1380,155,1660,Tuesday,January,Superfast
+REC-10252,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-09,972,1380,12,1660,Tuesday,January,Superfast
+REC-10253,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-10,1036,1300,56,2400,Wednesday,January,Superfast
+REC-10254,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-10,914,1250,43,2400,Wednesday,January,Superfast
+REC-10255,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-10,859,1000,8,360,Wednesday,January,Shatabdi
+REC-10256,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-10,877,1000,41,360,Wednesday,January,Shatabdi
+REC-10257,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-10,965,1228,11,500,Wednesday,January,Vande Bharat
+REC-10258,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-10,889,1128,47,500,Wednesday,January,Vande Bharat
+REC-10259,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-10,1002,1350,14,1280,Wednesday,January,Superfast
+REC-10260,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-10,1000,1300,12,1280,Wednesday,January,Superfast
+REC-10261,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-10,917,1050,27,1380,Wednesday,January,Rajdhani
+REC-10262,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-10,844,1100,9,1380,Wednesday,January,Rajdhani
+REC-10263,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-10,928,1300,9,620,Wednesday,January,Express
+REC-10264,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-10,1013,1250,2,620,Wednesday,January,Express
+REC-10265,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-10,1133,1500,44,1950,Wednesday,January,Superfast
+REC-10266,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-10,1206,1500,9,1950,Wednesday,January,Superfast
+REC-10267,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-10,951,1250,9,1140,Wednesday,January,Express
+REC-10268,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-10,987,1200,0,1140,Wednesday,January,Express
+REC-10269,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-10,892,1200,167,590,Wednesday,January,Express
+REC-10270,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-10,834,1100,8,590,Wednesday,January,Express
+REC-10271,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-10,1047,1350,28,350,Wednesday,January,Superfast
+REC-10272,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-10,1118,1400,53,350,Wednesday,January,Superfast
+REC-10273,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-10,855,1200,6,490,Wednesday,January,Express
+REC-10274,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-10,1038,1300,15,490,Wednesday,January,Express
+REC-10275,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-10,658,850,168,140,Wednesday,January,Shatabdi
+REC-10276,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-10,750,850,40,140,Wednesday,January,Shatabdi
+REC-10277,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-10,756,950,1,190,Wednesday,January,Superfast
+REC-10278,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-10,836,1050,71,190,Wednesday,January,Superfast
+REC-10279,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-10,974,1380,3,1660,Wednesday,January,Superfast
+REC-10280,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-10,1113,1380,57,1660,Wednesday,January,Superfast
+REC-10281,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-11,959,1200,18,2400,Thursday,January,Superfast
+REC-10282,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-11,1091,1200,14,2400,Thursday,January,Superfast
+REC-10283,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-11,938,950,10,360,Thursday,January,Shatabdi
+REC-10284,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-11,876,900,1,360,Thursday,January,Shatabdi
+REC-10285,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-11,1106,1178,55,500,Thursday,January,Vande Bharat
+REC-10286,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-11,1125,1228,13,500,Thursday,January,Vande Bharat
+REC-10287,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-11,1141,1300,2,1280,Thursday,January,Superfast
+REC-10288,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-11,1207,1400,7,1280,Thursday,January,Superfast
+REC-10289,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-11,935,1100,118,1380,Thursday,January,Rajdhani
+REC-10290,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-11,941,1100,41,1380,Thursday,January,Rajdhani
+REC-10291,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-11,1164,1300,8,620,Thursday,January,Express
+REC-10292,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-11,1233,1350,20,620,Thursday,January,Express
+REC-10293,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-11,1249,1450,2,1950,Thursday,January,Superfast
+REC-10294,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-11,1299,1500,11,1950,Thursday,January,Superfast
+REC-10295,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-11,1007,1250,4,1140,Thursday,January,Express
+REC-10296,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-11,1040,1250,14,1140,Thursday,January,Express
+REC-10297,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-11,949,1100,12,590,Thursday,January,Express
+REC-10298,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-11,1042,1200,6,590,Thursday,January,Express
+REC-10299,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-11,1093,1350,9,350,Thursday,January,Superfast
+REC-10300,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-11,1246,1450,5,350,Thursday,January,Superfast
+REC-10301,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-11,1084,1200,4,490,Thursday,January,Express
+REC-10302,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-11,1140,1250,85,490,Thursday,January,Express
+REC-10303,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-11,827,950,5,140,Thursday,January,Shatabdi
+REC-10304,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-11,836,900,1,140,Thursday,January,Shatabdi
+REC-10305,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-11,897,1050,28,190,Thursday,January,Superfast
+REC-10306,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-11,802,950,9,190,Thursday,January,Superfast
+REC-10307,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-11,1159,1380,45,1660,Thursday,January,Superfast
+REC-10308,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-11,1204,1430,11,1660,Thursday,January,Superfast
+REC-10309,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-12,1280,1250,19,2400,Friday,January,Superfast
+REC-10310,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-12,1373,1300,6,2400,Friday,January,Superfast
+REC-10311,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-12,1026,950,18,360,Friday,January,Shatabdi
+REC-10312,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-12,972,900,12,360,Friday,January,Shatabdi
+REC-10313,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-12,1135,1128,8,500,Friday,January,Vande Bharat
+REC-10314,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-12,1218,1128,8,500,Friday,January,Vande Bharat
+REC-10315,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-12,1297,1350,15,1280,Friday,January,Superfast
+REC-10316,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-12,1362,1400,15,1280,Friday,January,Superfast
+REC-10317,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-12,1134,1050,14,1380,Friday,January,Rajdhani
+REC-10318,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-12,1188,1100,15,1380,Friday,January,Rajdhani
+REC-10319,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-12,1390,1300,1,620,Friday,January,Express
+REC-10320,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-12,1456,1350,12,620,Friday,January,Express
+REC-10321,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-12,1369,1450,6,1950,Friday,January,Superfast
+REC-10322,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-12,1444,1500,13,1950,Friday,January,Superfast
+REC-10323,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-12,1309,1250,14,1140,Friday,January,Express
+REC-10324,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-12,1244,1300,42,1140,Friday,January,Express
+REC-10325,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-12,1126,1150,2,590,Friday,January,Express
+REC-10326,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-12,1261,1200,10,590,Friday,January,Express
+REC-10327,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-12,1367,1450,10,350,Friday,January,Superfast
+REC-10328,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-12,1460,1450,30,350,Friday,January,Superfast
+REC-10329,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-12,1237,1300,14,490,Friday,January,Express
+REC-10330,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-12,1343,1250,59,490,Friday,January,Express
+REC-10331,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-12,972,900,9,140,Friday,January,Shatabdi
+REC-10332,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-12,908,900,8,140,Friday,January,Shatabdi
+REC-10333,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-12,974,1000,3,190,Friday,January,Superfast
+REC-10334,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-12,1011,1000,12,190,Friday,January,Superfast
+REC-10335,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-12,1353,1380,6,1660,Friday,January,Superfast
+REC-10336,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-12,1386,1430,118,1660,Friday,January,Superfast
+REC-10337,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-13,1314,1250,31,2400,Saturday,January,Superfast
+REC-10338,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-13,1283,1200,23,2400,Saturday,January,Superfast
+REC-10339,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-13,903,900,86,360,Saturday,January,Shatabdi
+REC-10340,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-13,972,900,2,360,Saturday,January,Shatabdi
+REC-10341,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-13,1326,1228,7,500,Saturday,January,Vande Bharat
+REC-10342,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-13,1218,1128,39,500,Saturday,January,Vande Bharat
+REC-10343,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-13,1353,1400,9,1280,Saturday,January,Superfast
+REC-10344,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-13,1328,1300,13,1280,Saturday,January,Superfast
+REC-10345,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-13,1188,1100,27,1380,Saturday,January,Rajdhani
+REC-10346,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-13,1242,1150,11,1380,Saturday,January,Rajdhani
+REC-10347,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-13,1301,1300,11,620,Saturday,January,Express
+REC-10348,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-13,1266,1300,19,620,Saturday,January,Express
+REC-10349,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-13,1351,1400,8,1950,Saturday,January,Superfast
+REC-10350,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-13,1432,1450,82,1950,Saturday,January,Superfast
+REC-10351,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-13,1236,1200,14,1140,Saturday,January,Express
+REC-10352,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-13,1221,1300,12,1140,Saturday,January,Express
+REC-10353,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-13,1202,1150,42,590,Saturday,January,Express
+REC-10354,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-13,1081,1150,13,590,Saturday,January,Express
+REC-10355,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-13,1441,1350,9,350,Saturday,January,Superfast
+REC-10356,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-13,1367,1400,9,350,Saturday,January,Superfast
+REC-10357,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-13,1191,1200,0,490,Saturday,January,Express
+REC-10358,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-13,1114,1200,102,490,Saturday,January,Express
+REC-10359,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-13,912,900,14,140,Saturday,January,Shatabdi
+REC-10360,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-13,1026,950,9,140,Saturday,January,Shatabdi
+REC-10361,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-13,1120,1050,58,190,Saturday,January,Superfast
+REC-10362,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-13,1013,1000,2,190,Saturday,January,Superfast
+REC-10363,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-13,1362,1430,24,1660,Saturday,January,Superfast
+REC-10364,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-13,1381,1380,9,1660,Saturday,January,Superfast
+REC-10365,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-14,1280,1200,41,2400,Sunday,January,Superfast
+REC-10366,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-14,1286,1300,16,2400,Sunday,January,Superfast
+REC-10367,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-14,972,900,70,360,Sunday,January,Shatabdi
+REC-10368,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-14,1020,950,20,360,Sunday,January,Shatabdi
+REC-10369,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-14,1326,1228,3,500,Sunday,January,Vande Bharat
+REC-10370,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-14,1230,1178,32,500,Sunday,January,Vande Bharat
+REC-10371,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-14,1335,1400,35,1280,Sunday,January,Superfast
+REC-10372,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-14,1487,1400,62,1280,Sunday,January,Superfast
+REC-10373,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-14,1134,1050,17,1380,Sunday,January,Rajdhani
+REC-10374,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-14,1100,1100,34,1380,Sunday,January,Rajdhani
+REC-10375,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-14,1169,1250,83,620,Sunday,January,Express
+REC-10376,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-14,1267,1250,4,620,Sunday,January,Express
+REC-10377,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-14,1518,1500,14,1950,Sunday,January,Superfast
+REC-10378,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-14,1394,1400,11,1950,Sunday,January,Superfast
+REC-10379,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-14,1310,1250,105,1140,Sunday,January,Express
+REC-10380,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-14,1239,1300,14,1140,Sunday,January,Express
+REC-10381,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-14,1106,1100,20,590,Sunday,January,Express
+REC-10382,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-14,1114,1150,13,590,Sunday,January,Express
+REC-10383,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-14,1482,1450,35,350,Sunday,January,Superfast
+REC-10384,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-14,1309,1400,9,350,Sunday,January,Superfast
+REC-10385,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-14,1288,1200,4,490,Sunday,January,Express
+REC-10386,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-14,1271,1200,46,490,Sunday,January,Express
+REC-10387,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-14,889,850,4,140,Sunday,January,Shatabdi
+REC-10388,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-14,881,850,68,140,Sunday,January,Shatabdi
+REC-10389,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-14,934,1000,154,190,Sunday,January,Superfast
+REC-10390,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-14,1026,950,15,190,Sunday,January,Superfast
+REC-10391,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-14,1423,1430,17,1660,Sunday,January,Superfast
+REC-10392,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-14,1276,1380,1,1660,Sunday,January,Superfast
+REC-10393,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-15,979,1200,29,2400,Monday,January,Superfast
+REC-10394,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-15,1086,1300,20,2400,Monday,January,Superfast
+REC-10395,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-15,909,1000,11,360,Monday,January,Shatabdi
+REC-10396,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-15,785,900,1,360,Monday,January,Shatabdi
+REC-10397,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-15,1160,1178,38,500,Monday,January,Vande Bharat
+REC-10398,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-15,973,1128,19,500,Monday,January,Vande Bharat
+REC-10399,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-15,1202,1400,0,1280,Monday,January,Superfast
+REC-10400,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-15,1198,1350,1,1280,Monday,January,Superfast
+REC-10401,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-15,996,1100,17,1380,Monday,January,Rajdhani
+REC-10402,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-15,1128,1150,28,1380,Monday,January,Rajdhani
+REC-10403,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-15,1101,1300,1,620,Monday,January,Express
+REC-10404,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-15,1139,1250,13,620,Monday,January,Express
+REC-10405,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-15,1317,1500,3,1950,Monday,January,Superfast
+REC-10406,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-15,1206,1500,13,1950,Monday,January,Superfast
+REC-10407,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-15,1174,1300,17,1140,Monday,January,Express
+REC-10408,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-15,957,1200,56,1140,Monday,January,Express
+REC-10409,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-15,1063,1200,27,590,Monday,January,Express
+REC-10410,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-15,992,1100,1,590,Monday,January,Express
+REC-10411,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-15,1139,1400,41,350,Monday,January,Superfast
+REC-10412,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-15,1241,1450,85,350,Monday,January,Superfast
+REC-10413,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-15,1020,1300,39,490,Monday,January,Express
+REC-10414,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-15,1090,1250,12,490,Monday,January,Express
+REC-10415,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-15,799,900,76,140,Monday,January,Shatabdi
+REC-10416,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-15,818,950,0,140,Monday,January,Shatabdi
+REC-10417,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-15,864,1050,1,190,Monday,January,Superfast
+REC-10418,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-15,852,1000,8,190,Monday,January,Superfast
+REC-10419,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-15,1234,1430,11,1660,Monday,January,Superfast
+REC-10420,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-15,1316,1480,11,1660,Monday,January,Superfast
+REC-10421,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-16,997,1300,88,2400,Tuesday,January,Superfast
+REC-10422,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-16,1068,1300,37,2400,Tuesday,January,Superfast
+REC-10423,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-16,836,1000,12,360,Tuesday,January,Shatabdi
+REC-10424,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-16,812,1000,9,360,Tuesday,January,Shatabdi
+REC-10425,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-16,918,1128,68,500,Tuesday,January,Vande Bharat
+REC-10426,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-16,879,1128,2,500,Tuesday,January,Vande Bharat
+REC-10427,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-16,1022,1400,68,1280,Tuesday,January,Superfast
+REC-10428,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-16,1078,1350,49,1280,Tuesday,January,Superfast
+REC-10429,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-16,924,1050,15,1380,Tuesday,January,Rajdhani
+REC-10430,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-16,876,1100,68,1380,Tuesday,January,Rajdhani
+REC-10431,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-16,1004,1250,11,620,Tuesday,January,Express
+REC-10432,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-16,983,1300,79,620,Tuesday,January,Express
+REC-10433,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-16,1152,1400,50,1950,Tuesday,January,Superfast
+REC-10434,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-16,1114,1500,3,1950,Tuesday,January,Superfast
+REC-10435,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-16,992,1300,58,1140,Tuesday,January,Express
+REC-10436,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-16,941,1250,0,1140,Tuesday,January,Express
+REC-10437,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-16,982,1200,7,590,Tuesday,January,Express
+REC-10438,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-16,889,1150,13,590,Tuesday,January,Express
+REC-10439,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-16,978,1350,0,350,Tuesday,January,Superfast
+REC-10440,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-16,1074,1400,15,350,Tuesday,January,Superfast
+REC-10441,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-16,846,1200,39,490,Tuesday,January,Express
+REC-10442,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-16,1010,1250,37,490,Tuesday,January,Express
+REC-10443,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-16,818,950,3,140,Tuesday,January,Shatabdi
+REC-10444,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-16,656,850,1,140,Tuesday,January,Shatabdi
+REC-10445,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-16,714,950,40,190,Tuesday,January,Superfast
+REC-10446,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-16,850,1050,5,190,Tuesday,January,Superfast
+REC-10447,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-16,1143,1480,2,1660,Tuesday,January,Superfast
+REC-10448,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-16,1060,1480,34,1660,Tuesday,January,Superfast
+REC-10449,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-17,900,1200,18,2400,Wednesday,January,Superfast
+REC-10450,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-17,881,1250,29,2400,Wednesday,January,Superfast
+REC-10451,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-17,735,900,3,360,Wednesday,January,Shatabdi
+REC-10452,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-17,849,1000,6,360,Wednesday,January,Shatabdi
+REC-10453,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-17,930,1128,40,500,Wednesday,January,Vande Bharat
+REC-10454,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-17,953,1228,20,500,Wednesday,January,Vande Bharat
+REC-10455,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-17,1048,1400,4,1280,Wednesday,January,Superfast
+REC-10456,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-17,975,1300,12,1280,Wednesday,January,Superfast
+REC-10457,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-17,882,1050,34,1380,Wednesday,January,Rajdhani
+REC-10458,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-17,980,1150,34,1380,Wednesday,January,Rajdhani
+REC-10459,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-17,1061,1350,23,620,Wednesday,January,Express
+REC-10460,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-17,1018,1350,4,620,Wednesday,January,Express
+REC-10461,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-17,1219,1500,15,1950,Wednesday,January,Superfast
+REC-10462,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-17,1066,1500,9,1950,Wednesday,January,Superfast
+REC-10463,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-17,969,1200,2,1140,Wednesday,January,Express
+REC-10464,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-17,956,1200,40,1140,Wednesday,January,Express
+REC-10465,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-17,838,1150,35,590,Wednesday,January,Express
+REC-10466,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-17,849,1100,5,590,Wednesday,January,Express
+REC-10467,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-17,1046,1400,51,350,Wednesday,January,Superfast
+REC-10468,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-17,1096,1450,151,350,Wednesday,January,Superfast
+REC-10469,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-17,1035,1300,40,490,Wednesday,January,Express
+REC-10470,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-17,963,1250,131,490,Wednesday,January,Express
+REC-10471,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-17,749,850,12,140,Wednesday,January,Shatabdi
+REC-10472,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-17,740,900,33,140,Wednesday,January,Shatabdi
+REC-10473,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-17,773,1050,34,190,Wednesday,January,Superfast
+REC-10474,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-17,797,1050,10,190,Wednesday,January,Superfast
+REC-10475,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-17,1169,1480,11,1660,Wednesday,January,Superfast
+REC-10476,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-17,1054,1430,37,1660,Wednesday,January,Superfast
+REC-10477,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-18,1154,1300,28,2400,Thursday,January,Superfast
+REC-10478,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-18,1116,1300,54,2400,Thursday,January,Superfast
+REC-10479,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-18,827,900,8,360,Thursday,January,Shatabdi
+REC-10480,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-18,886,950,30,360,Thursday,January,Shatabdi
+REC-10481,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-18,1123,1178,18,500,Thursday,January,Vande Bharat
+REC-10482,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-18,1099,1178,35,500,Thursday,January,Vande Bharat
+REC-10483,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-18,1025,1300,4,1280,Thursday,January,Superfast
+REC-10484,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-18,1205,1350,6,1280,Thursday,January,Superfast
+REC-10485,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-18,1103,1150,18,1380,Thursday,January,Rajdhani
+REC-10486,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-18,1014,1050,97,1380,Thursday,January,Rajdhani
+REC-10487,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-18,1072,1350,8,620,Thursday,January,Express
+REC-10488,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-18,1078,1250,10,620,Thursday,January,Express
+REC-10489,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-18,1150,1450,42,1950,Thursday,January,Superfast
+REC-10490,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-18,1201,1500,9,1950,Thursday,January,Superfast
+REC-10491,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-18,1012,1200,11,1140,Thursday,January,Express
+REC-10492,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-18,1025,1200,6,1140,Thursday,January,Express
+REC-10493,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-18,1016,1200,7,590,Thursday,January,Express
+REC-10494,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-18,1041,1200,8,590,Thursday,January,Express
+REC-10495,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-18,1250,1450,13,350,Thursday,January,Superfast
+REC-10496,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-18,1132,1350,6,350,Thursday,January,Superfast
+REC-10497,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-18,1193,1300,158,490,Thursday,January,Express
+REC-10498,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-18,969,1200,1,490,Thursday,January,Express
+REC-10499,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-18,862,900,59,140,Thursday,January,Shatabdi
+REC-10500,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-18,814,900,6,140,Thursday,January,Shatabdi
+REC-10501,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-18,836,1050,66,190,Thursday,January,Superfast
+REC-10502,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-18,878,1000,13,190,Thursday,January,Superfast
+REC-10503,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-18,1163,1430,17,1660,Thursday,January,Superfast
+REC-10504,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-18,1140,1380,70,1660,Thursday,January,Superfast
+REC-10505,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-19,1227,1250,49,2400,Friday,January,Superfast
+REC-10506,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-19,1276,1300,11,2400,Friday,January,Superfast
+REC-10507,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-19,903,900,139,360,Friday,January,Shatabdi
+REC-10508,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-19,972,900,85,360,Friday,January,Shatabdi
+REC-10509,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-19,1272,1178,179,500,Friday,January,Vande Bharat
+REC-10510,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-19,1266,1228,5,500,Friday,January,Vande Bharat
+REC-10511,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-19,1454,1400,121,1280,Friday,January,Superfast
+REC-10512,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-19,1409,1350,85,1280,Friday,January,Superfast
+REC-10513,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-19,1188,1100,46,1380,Friday,January,Rajdhani
+REC-10514,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-19,1119,1050,47,1380,Friday,January,Rajdhani
+REC-10515,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-19,1305,1350,7,620,Friday,January,Express
+REC-10516,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-19,1314,1250,10,620,Friday,January,Express
+REC-10517,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-19,1478,1500,31,1950,Friday,January,Superfast
+REC-10518,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-19,1493,1500,3,1950,Friday,January,Superfast
+REC-10519,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-19,1382,1300,11,1140,Friday,January,Express
+REC-10520,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-19,1254,1250,6,1140,Friday,January,Express
+REC-10521,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-19,1157,1100,10,590,Friday,January,Express
+REC-10522,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-19,1234,1200,15,590,Friday,January,Express
+REC-10523,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-19,1378,1400,11,350,Friday,January,Superfast
+REC-10524,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-19,1385,1350,1,350,Friday,January,Superfast
+REC-10525,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-19,1240,1250,0,490,Friday,January,Express
+REC-10526,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-19,1184,1250,13,490,Friday,January,Express
+REC-10527,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-19,1026,950,9,140,Friday,January,Shatabdi
+REC-10528,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-19,930,900,14,140,Friday,January,Shatabdi
+REC-10529,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-19,1105,1050,45,190,Friday,January,Superfast
+REC-10530,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-19,957,1000,104,190,Friday,January,Superfast
+REC-10531,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-19,1538,1430,4,1660,Friday,January,Superfast
+REC-10532,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-19,1431,1430,1,1660,Friday,January,Superfast
+REC-10533,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-20,1239,1250,39,2400,Saturday,January,Superfast
+REC-10534,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-20,1227,1250,50,2400,Saturday,January,Superfast
+REC-10535,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-20,1026,950,39,360,Saturday,January,Shatabdi
+REC-10536,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-20,993,950,13,360,Saturday,January,Shatabdi
+REC-10537,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-20,1253,1178,4,500,Saturday,January,Vande Bharat
+REC-10538,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-20,1283,1228,72,500,Saturday,January,Vande Bharat
+REC-10539,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-20,1319,1300,19,1280,Saturday,January,Superfast
+REC-10540,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-20,1408,1350,12,1280,Saturday,January,Superfast
+REC-10541,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-20,1242,1150,43,1380,Saturday,January,Rajdhani
+REC-10542,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-20,1099,1050,37,1380,Saturday,January,Rajdhani
+REC-10543,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-20,1346,1350,9,620,Saturday,January,Express
+REC-10544,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-20,1404,1350,82,620,Saturday,January,Express
+REC-10545,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-20,1359,1400,15,1950,Saturday,January,Superfast
+REC-10546,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-20,1397,1400,40,1950,Saturday,January,Superfast
+REC-10547,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-20,1109,1200,68,1140,Saturday,January,Express
+REC-10548,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-20,1321,1250,39,1140,Saturday,January,Express
+REC-10549,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-20,1217,1150,90,590,Saturday,January,Express
+REC-10550,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-20,1058,1100,6,590,Saturday,January,Express
+REC-10551,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-20,1372,1450,72,350,Saturday,January,Superfast
+REC-10552,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-20,1330,1400,14,350,Saturday,January,Superfast
+REC-10553,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-20,1379,1300,7,490,Saturday,January,Express
+REC-10554,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-20,1181,1200,12,490,Saturday,January,Express
+REC-10555,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-20,870,850,8,140,Saturday,January,Shatabdi
+REC-10556,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-20,891,850,4,140,Saturday,January,Shatabdi
+REC-10557,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-20,883,950,0,190,Saturday,January,Superfast
+REC-10558,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-20,1112,1050,37,190,Saturday,January,Superfast
+REC-10559,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-20,1450,1430,2,1660,Saturday,January,Superfast
+REC-10560,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-20,1339,1380,51,1660,Saturday,January,Superfast
+REC-10561,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-21,1284,1200,17,2400,Sunday,January,Superfast
+REC-10562,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-21,1240,1250,39,2400,Sunday,January,Superfast
+REC-10563,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-21,976,950,14,360,Sunday,January,Shatabdi
+REC-10564,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-21,1026,950,0,360,Sunday,January,Shatabdi
+REC-10565,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-21,1272,1178,12,500,Sunday,January,Vande Bharat
+REC-10566,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-21,1318,1228,20,500,Sunday,January,Vande Bharat
+REC-10567,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-21,1290,1300,3,1280,Sunday,January,Superfast
+REC-10568,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-21,1399,1300,7,1280,Sunday,January,Superfast
+REC-10569,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-21,1242,1150,161,1380,Sunday,January,Rajdhani
+REC-10570,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-21,1114,1050,14,1380,Sunday,January,Rajdhani
+REC-10571,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-21,1313,1250,31,620,Sunday,January,Express
+REC-10572,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-21,1332,1300,18,620,Sunday,January,Express
+REC-10573,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-21,1505,1400,4,1950,Sunday,January,Superfast
+REC-10574,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-21,1385,1500,58,1950,Sunday,January,Superfast
+REC-10575,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-21,1404,1300,9,1140,Sunday,January,Express
+REC-10576,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-21,1260,1250,12,1140,Sunday,January,Express
+REC-10577,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-21,1130,1200,119,590,Sunday,January,Express
+REC-10578,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-21,1194,1200,12,590,Sunday,January,Express
+REC-10579,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-21,1377,1350,5,350,Sunday,January,Superfast
+REC-10580,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-21,1405,1350,0,350,Sunday,January,Superfast
+REC-10581,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-21,1196,1250,79,490,Sunday,January,Express
+REC-10582,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-21,1253,1250,42,490,Sunday,January,Express
+REC-10583,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-21,935,900,88,140,Sunday,January,Shatabdi
+REC-10584,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-21,997,950,44,140,Sunday,January,Shatabdi
+REC-10585,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-21,1076,1000,10,190,Sunday,January,Superfast
+REC-10586,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-21,886,950,10,190,Sunday,January,Superfast
+REC-10587,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-21,1289,1380,27,1660,Sunday,January,Superfast
+REC-10588,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-21,1463,1380,17,1660,Sunday,January,Superfast
+REC-10589,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-22,1109,1250,10,2400,Monday,January,Superfast
+REC-10590,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-22,992,1200,21,2400,Monday,January,Superfast
+REC-10591,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-22,947,1000,6,360,Monday,January,Shatabdi
+REC-10592,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-22,804,900,31,360,Monday,January,Shatabdi
+REC-10593,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-22,1011,1178,43,500,Monday,January,Vande Bharat
+REC-10594,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-22,1073,1178,8,500,Monday,January,Vande Bharat
+REC-10595,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-22,1148,1400,12,1280,Monday,January,Superfast
+REC-10596,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-22,1064,1300,22,1280,Monday,January,Superfast
+REC-10597,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-22,982,1150,19,1380,Monday,January,Rajdhani
+REC-10598,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-22,1082,1150,22,1380,Monday,January,Rajdhani
+REC-10599,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-22,1053,1250,4,620,Monday,January,Express
+REC-10600,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-22,1222,1350,79,620,Monday,January,Express
+REC-10601,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-22,1183,1500,40,1950,Monday,January,Superfast
+REC-10602,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-22,1228,1450,8,1950,Monday,January,Superfast
+REC-10603,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-22,1142,1250,3,1140,Monday,January,Express
+REC-10604,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-22,1042,1200,5,1140,Monday,January,Express
+REC-10605,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-22,913,1100,19,590,Monday,January,Express
+REC-10606,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-22,1084,1200,54,590,Monday,January,Express
+REC-10607,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-22,1327,1450,3,350,Monday,January,Superfast
+REC-10608,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-22,1187,1400,6,350,Monday,January,Superfast
+REC-10609,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-22,1072,1300,126,490,Monday,January,Express
+REC-10610,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-22,1015,1200,1,490,Monday,January,Express
+REC-10611,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-22,812,950,7,140,Monday,January,Shatabdi
+REC-10612,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-22,821,950,58,140,Monday,January,Shatabdi
+REC-10613,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-22,860,1050,8,190,Monday,January,Superfast
+REC-10614,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-22,846,950,5,190,Monday,January,Superfast
+REC-10615,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-22,1278,1430,13,1660,Monday,January,Superfast
+REC-10616,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-22,1289,1480,3,1660,Monday,January,Superfast
+REC-10617,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-23,974,1200,10,2400,Tuesday,January,Superfast
+REC-10618,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-23,948,1300,34,2400,Tuesday,January,Superfast
+REC-10619,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-23,773,900,58,360,Tuesday,January,Shatabdi
+REC-10620,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-23,739,950,85,360,Tuesday,January,Shatabdi
+REC-10621,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-23,970,1128,13,500,Tuesday,January,Vande Bharat
+REC-10622,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-23,1001,1128,41,500,Tuesday,January,Vande Bharat
+REC-10623,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-23,998,1300,8,1280,Tuesday,January,Superfast
+REC-10624,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-23,921,1300,16,1280,Tuesday,January,Superfast
+REC-10625,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-23,879,1100,42,1380,Tuesday,January,Rajdhani
+REC-10626,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-23,839,1050,14,1380,Tuesday,January,Rajdhani
+REC-10627,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-23,886,1250,10,620,Tuesday,January,Express
+REC-10628,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-23,988,1350,3,620,Tuesday,January,Express
+REC-10629,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-23,1114,1450,2,1950,Tuesday,January,Superfast
+REC-10630,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-23,1019,1400,0,1950,Tuesday,January,Superfast
+REC-10631,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-23,917,1200,11,1140,Tuesday,January,Express
+REC-10632,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-23,1014,1250,86,1140,Tuesday,January,Express
+REC-10633,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-23,785,1100,2,590,Tuesday,January,Express
+REC-10634,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-23,876,1200,1,590,Tuesday,January,Express
+REC-10635,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-23,1004,1400,3,350,Tuesday,January,Superfast
+REC-10636,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-23,1063,1350,8,350,Tuesday,January,Superfast
+REC-10637,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-23,987,1300,36,490,Tuesday,January,Express
+REC-10638,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-23,939,1200,2,490,Tuesday,January,Express
+REC-10639,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-23,786,900,3,140,Tuesday,January,Shatabdi
+REC-10640,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-23,795,900,2,140,Tuesday,January,Shatabdi
+REC-10641,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-23,760,950,36,190,Tuesday,January,Superfast
+REC-10642,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-23,860,1050,0,190,Tuesday,January,Superfast
+REC-10643,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-23,1126,1480,8,1660,Tuesday,January,Superfast
+REC-10644,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-23,1134,1430,11,1660,Tuesday,January,Superfast
+REC-10645,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-24,1039,1300,109,2400,Wednesday,January,Superfast
+REC-10646,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-24,923,1300,40,2400,Wednesday,January,Superfast
+REC-10647,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-24,787,950,44,360,Wednesday,January,Shatabdi
+REC-10648,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-24,796,950,13,360,Wednesday,January,Shatabdi
+REC-10649,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-24,970,1128,3,500,Wednesday,January,Vande Bharat
+REC-10650,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-24,904,1178,99,500,Wednesday,January,Vande Bharat
+REC-10651,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-24,1046,1300,8,1280,Wednesday,January,Superfast
+REC-10652,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-24,1099,1400,43,1280,Wednesday,January,Superfast
+REC-10653,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-24,830,1050,96,1380,Wednesday,January,Rajdhani
+REC-10654,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-24,948,1150,25,1380,Wednesday,January,Rajdhani
+REC-10655,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-24,993,1250,27,620,Wednesday,January,Express
+REC-10656,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-24,961,1300,65,620,Wednesday,January,Express
+REC-10657,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-24,1099,1400,5,1950,Wednesday,January,Superfast
+REC-10658,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-24,1166,1500,80,1950,Wednesday,January,Superfast
+REC-10659,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-24,901,1250,18,1140,Wednesday,January,Express
+REC-10660,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-24,964,1250,0,1140,Wednesday,January,Express
+REC-10661,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-24,796,1100,4,590,Wednesday,January,Express
+REC-10662,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-24,936,1150,11,590,Wednesday,January,Express
+REC-10663,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-24,1173,1450,0,350,Wednesday,January,Superfast
+REC-10664,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-24,1028,1450,1,350,Wednesday,January,Superfast
+REC-10665,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-24,942,1300,6,490,Wednesday,January,Express
+REC-10666,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-24,985,1300,15,490,Wednesday,January,Express
+REC-10667,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-24,824,950,29,140,Wednesday,January,Shatabdi
+REC-10668,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-24,670,850,39,140,Wednesday,January,Shatabdi
+REC-10669,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-24,800,1000,4,190,Wednesday,January,Superfast
+REC-10670,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-24,676,950,64,190,Wednesday,January,Superfast
+REC-10671,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-24,1156,1480,1,1660,Wednesday,January,Superfast
+REC-10672,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-24,991,1380,13,1660,Wednesday,January,Superfast
+REC-10673,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-25,1040,1250,40,2400,Thursday,January,Superfast
+REC-10674,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-25,1021,1250,2,2400,Thursday,January,Superfast
+REC-10675,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-25,850,1000,8,360,Thursday,January,Shatabdi
+REC-10676,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-25,857,950,23,360,Thursday,January,Shatabdi
+REC-10677,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-25,958,1128,6,500,Thursday,January,Vande Bharat
+REC-10678,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-25,1074,1128,10,500,Thursday,January,Vande Bharat
+REC-10679,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-25,1177,1300,30,1280,Thursday,January,Superfast
+REC-10680,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-25,1067,1300,30,1280,Thursday,January,Superfast
+REC-10681,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-25,998,1100,29,1380,Thursday,January,Rajdhani
+REC-10682,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-25,1021,1100,26,1380,Thursday,January,Rajdhani
+REC-10683,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-25,1160,1350,41,620,Thursday,January,Express
+REC-10684,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-25,1108,1350,7,620,Thursday,January,Express
+REC-10685,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-25,1147,1450,52,1950,Thursday,January,Superfast
+REC-10686,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-25,1184,1400,19,1950,Thursday,January,Superfast
+REC-10687,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-25,1085,1250,79,1140,Thursday,January,Express
+REC-10688,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-25,1093,1200,9,1140,Thursday,January,Express
+REC-10689,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-25,991,1150,7,590,Thursday,January,Express
+REC-10690,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-25,928,1100,12,590,Thursday,January,Express
+REC-10691,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-25,1157,1350,9,350,Thursday,January,Superfast
+REC-10692,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-25,1096,1350,15,350,Thursday,January,Superfast
+REC-10693,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-25,1044,1300,50,490,Thursday,January,Express
+REC-10694,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-25,975,1200,34,490,Thursday,January,Express
+REC-10695,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-25,853,950,5,140,Thursday,January,Shatabdi
+REC-10696,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-25,929,950,88,140,Thursday,January,Shatabdi
+REC-10697,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-25,836,1050,12,190,Thursday,January,Superfast
+REC-10698,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-25,892,1000,6,190,Thursday,January,Superfast
+REC-10699,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-25,1227,1480,36,1660,Thursday,January,Superfast
+REC-10700,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-25,1296,1480,52,1660,Thursday,January,Superfast
+REC-10701,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-26,1240,1250,54,2400,Friday,January,Superfast
+REC-10702,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-26,1225,1300,26,2400,Friday,January,Superfast
+REC-10703,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-26,1009,950,22,360,Friday,January,Shatabdi
+REC-10704,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-26,972,900,116,360,Friday,January,Shatabdi
+REC-10705,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-26,1220,1178,15,500,Friday,January,Vande Bharat
+REC-10706,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-26,1326,1228,12,500,Friday,January,Vande Bharat
+REC-10707,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-26,1271,1300,36,1280,Friday,January,Superfast
+REC-10708,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-26,1392,1400,20,1280,Friday,January,Superfast
+REC-10709,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-26,1067,1050,27,1380,Friday,January,Rajdhani
+REC-10710,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-26,1097,1050,78,1380,Friday,January,Rajdhani
+REC-10711,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-26,1154,1250,1,620,Friday,January,Express
+REC-10712,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-26,1247,1300,87,620,Friday,January,Express
+REC-10713,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-26,1558,1450,20,1950,Friday,January,Superfast
+REC-10714,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-26,1406,1400,30,1950,Friday,January,Superfast
+REC-10715,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-26,1381,1300,24,1140,Friday,January,Express
+REC-10716,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-26,1272,1250,11,1140,Friday,January,Express
+REC-10717,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-26,1131,1200,2,590,Friday,January,Express
+REC-10718,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-26,1168,1150,25,590,Friday,January,Express
+REC-10719,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-26,1475,1450,45,350,Friday,January,Superfast
+REC-10720,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-26,1458,1350,11,350,Friday,January,Superfast
+REC-10721,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-26,1301,1300,10,490,Friday,January,Express
+REC-10722,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-26,1163,1250,65,490,Friday,January,Express
+REC-10723,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-26,972,900,6,140,Friday,January,Shatabdi
+REC-10724,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-26,918,850,1,140,Friday,January,Shatabdi
+REC-10725,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-26,1004,1050,8,190,Friday,January,Superfast
+REC-10726,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-26,1102,1050,75,190,Friday,January,Superfast
+REC-10727,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-26,1329,1430,0,1660,Friday,January,Superfast
+REC-10728,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-26,1553,1480,6,1660,Friday,January,Superfast
+REC-10729,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-27,1375,1300,12,2400,Saturday,January,Superfast
+REC-10730,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-27,1161,1200,47,2400,Saturday,January,Superfast
+REC-10731,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-27,1026,950,35,360,Saturday,January,Shatabdi
+REC-10732,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-27,980,950,66,360,Saturday,January,Shatabdi
+REC-10733,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-27,1272,1178,12,500,Saturday,January,Vande Bharat
+REC-10734,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-27,1255,1228,13,500,Saturday,January,Vande Bharat
+REC-10735,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-27,1304,1400,44,1280,Saturday,January,Superfast
+REC-10736,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-27,1509,1400,40,1280,Saturday,January,Superfast
+REC-10737,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-27,1188,1100,23,1380,Saturday,January,Rajdhani
+REC-10738,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-27,1188,1100,18,1380,Saturday,January,Rajdhani
+REC-10739,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-27,1348,1300,10,620,Saturday,January,Express
+REC-10740,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-27,1255,1300,8,620,Saturday,January,Express
+REC-10741,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-27,1463,1400,1,1950,Saturday,January,Superfast
+REC-10742,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-27,1510,1500,9,1950,Saturday,January,Superfast
+REC-10743,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-27,1301,1300,27,1140,Saturday,January,Express
+REC-10744,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-27,1351,1300,31,1140,Saturday,January,Express
+REC-10745,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-27,1082,1100,8,590,Saturday,January,Express
+REC-10746,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-27,1124,1100,12,590,Saturday,January,Express
+REC-10747,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-27,1459,1450,26,350,Saturday,January,Superfast
+REC-10748,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-27,1481,1450,55,350,Saturday,January,Superfast
+REC-10749,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-27,1224,1250,27,490,Saturday,January,Express
+REC-10750,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-27,1171,1250,12,490,Saturday,January,Express
+REC-10751,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-27,1026,950,12,140,Saturday,January,Shatabdi
+REC-10752,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-27,913,850,38,140,Saturday,January,Shatabdi
+REC-10753,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-27,928,950,11,190,Saturday,January,Superfast
+REC-10754,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-27,952,950,8,190,Saturday,January,Superfast
+REC-10755,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-27,1508,1430,8,1660,Saturday,January,Superfast
+REC-10756,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-27,1536,1480,154,1660,Saturday,January,Superfast
+REC-10757,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-28,1242,1250,15,2400,Sunday,January,Superfast
+REC-10758,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-28,1199,1200,36,2400,Sunday,January,Superfast
+REC-10759,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-28,1026,950,8,360,Sunday,January,Shatabdi
+REC-10760,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-28,953,900,2,360,Sunday,January,Shatabdi
+REC-10761,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-28,1296,1228,64,500,Sunday,January,Vande Bharat
+REC-10762,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-28,1218,1128,58,500,Sunday,January,Vande Bharat
+REC-10763,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-28,1237,1300,32,1280,Sunday,January,Superfast
+REC-10764,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-28,1290,1300,31,1280,Sunday,January,Superfast
+REC-10765,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-28,1242,1150,41,1380,Sunday,January,Rajdhani
+REC-10766,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-28,1134,1050,22,1380,Sunday,January,Rajdhani
+REC-10767,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-28,1324,1250,10,620,Sunday,January,Express
+REC-10768,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-28,1437,1350,57,620,Sunday,January,Express
+REC-10769,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-28,1384,1400,18,1950,Sunday,January,Superfast
+REC-10770,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-28,1356,1400,89,1950,Sunday,January,Superfast
+REC-10771,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-28,1350,1300,45,1140,Sunday,January,Express
+REC-10772,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-28,1187,1250,21,1140,Sunday,January,Express
+REC-10773,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-28,1146,1150,14,590,Sunday,January,Express
+REC-10774,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-28,1199,1150,14,590,Sunday,January,Express
+REC-10775,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-28,1332,1350,26,350,Sunday,January,Superfast
+REC-10776,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-28,1465,1450,117,350,Sunday,January,Superfast
+REC-10777,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-28,1205,1300,8,490,Sunday,January,Express
+REC-10778,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-28,1299,1300,33,490,Sunday,January,Express
+REC-10779,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-28,1026,950,6,140,Sunday,January,Shatabdi
+REC-10780,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-28,1026,950,2,140,Sunday,January,Shatabdi
+REC-10781,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-28,981,1050,15,190,Sunday,January,Superfast
+REC-10782,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-28,968,1000,13,190,Sunday,January,Superfast
+REC-10783,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-28,1477,1380,60,1660,Sunday,January,Superfast
+REC-10784,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-28,1444,1480,15,1660,Sunday,January,Superfast
+REC-10785,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-29,989,1200,56,2400,Monday,January,Superfast
+REC-10786,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-29,946,1200,16,2400,Monday,January,Superfast
+REC-10787,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-29,964,1000,15,360,Monday,January,Shatabdi
+REC-10788,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-29,864,950,25,360,Monday,January,Shatabdi
+REC-10789,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-29,1109,1178,48,500,Monday,January,Vande Bharat
+REC-10790,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-29,1155,1178,5,500,Monday,January,Vande Bharat
+REC-10791,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-29,1222,1400,5,1280,Monday,January,Superfast
+REC-10792,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-29,1214,1400,84,1280,Monday,January,Superfast
+REC-10793,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-29,1103,1150,14,1380,Monday,January,Rajdhani
+REC-10794,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-29,939,1100,58,1380,Monday,January,Rajdhani
+REC-10795,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-29,1048,1300,64,620,Monday,January,Express
+REC-10796,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-29,1129,1350,23,620,Monday,January,Express
+REC-10797,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-29,1274,1400,15,1950,Monday,January,Superfast
+REC-10798,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-29,1266,1450,5,1950,Monday,January,Superfast
+REC-10799,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-29,1094,1250,15,1140,Monday,January,Express
+REC-10800,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-29,1052,1250,7,1140,Monday,January,Express
+REC-10801,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-29,964,1100,16,590,Monday,January,Express
+REC-10802,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-29,948,1200,5,590,Monday,January,Express
+REC-10803,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-29,1331,1450,9,350,Monday,January,Superfast
+REC-10804,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-29,1328,1450,6,350,Monday,January,Superfast
+REC-10805,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-29,962,1200,88,490,Monday,January,Express
+REC-10806,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-29,1055,1250,13,490,Monday,January,Express
+REC-10807,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-29,783,900,87,140,Monday,January,Shatabdi
+REC-10808,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-29,814,900,4,140,Monday,January,Shatabdi
+REC-10809,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-29,823,1000,6,190,Monday,January,Superfast
+REC-10810,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-29,906,1050,40,190,Monday,January,Superfast
+REC-10811,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-29,1187,1430,4,1660,Monday,January,Superfast
+REC-10812,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-29,1295,1480,12,1660,Monday,January,Superfast
+REC-10813,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-30,861,1200,62,2400,Tuesday,January,Superfast
+REC-10814,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-30,1010,1250,63,2400,Tuesday,January,Superfast
+REC-10815,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-30,726,900,65,360,Tuesday,January,Shatabdi
+REC-10816,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-30,847,950,11,360,Tuesday,January,Shatabdi
+REC-10817,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-30,937,1178,28,500,Tuesday,January,Vande Bharat
+REC-10818,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-30,939,1128,7,500,Tuesday,January,Vande Bharat
+REC-10819,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-30,1020,1350,15,1280,Tuesday,January,Superfast
+REC-10820,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-30,971,1300,29,1280,Tuesday,January,Superfast
+REC-10821,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-30,984,1150,27,1380,Tuesday,January,Rajdhani
+REC-10822,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-30,926,1100,46,1380,Tuesday,January,Rajdhani
+REC-10823,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-30,958,1350,0,620,Tuesday,January,Express
+REC-10824,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-30,1031,1250,13,620,Tuesday,January,Express
+REC-10825,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-30,1042,1450,11,1950,Tuesday,January,Superfast
+REC-10826,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-30,1201,1500,12,1950,Tuesday,January,Superfast
+REC-10827,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-30,983,1250,21,1140,Tuesday,January,Express
+REC-10828,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-30,1010,1250,9,1140,Tuesday,January,Express
+REC-10829,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-30,933,1200,27,590,Tuesday,January,Express
+REC-10830,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-30,804,1100,7,590,Tuesday,January,Express
+REC-10831,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-30,1017,1400,11,350,Tuesday,January,Superfast
+REC-10832,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-30,1078,1350,37,350,Tuesday,January,Superfast
+REC-10833,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-30,905,1200,2,490,Tuesday,January,Express
+REC-10834,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-30,998,1300,4,490,Tuesday,January,Express
+REC-10835,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-30,728,900,0,140,Tuesday,January,Shatabdi
+REC-10836,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-30,753,850,6,140,Tuesday,January,Shatabdi
+REC-10837,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-30,824,1000,1,190,Tuesday,January,Superfast
+REC-10838,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-30,825,1000,51,190,Tuesday,January,Superfast
+REC-10839,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-30,1176,1480,14,1660,Tuesday,January,Superfast
+REC-10840,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-30,1210,1480,24,1660,Tuesday,January,Superfast
+REC-10841,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-01-31,974,1200,42,2400,Wednesday,January,Superfast
+REC-10842,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-01-31,1069,1300,51,2400,Wednesday,January,Superfast
+REC-10843,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-01-31,765,950,44,360,Wednesday,January,Shatabdi
+REC-10844,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-01-31,795,950,13,360,Wednesday,January,Shatabdi
+REC-10845,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-01-31,960,1178,6,500,Wednesday,January,Vande Bharat
+REC-10846,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-01-31,1025,1228,52,500,Wednesday,January,Vande Bharat
+REC-10847,TR-12164,Chennai Express,Mumbai,Chennai,2024-01-31,983,1300,8,1280,Wednesday,January,Superfast
+REC-10848,TR-12163,Mumbai Express,Chennai,Mumbai,2024-01-31,1128,1400,18,1280,Wednesday,January,Superfast
+REC-10849,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-01-31,867,1050,48,1380,Wednesday,January,Rajdhani
+REC-10850,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-01-31,920,1050,63,1380,Wednesday,January,Rajdhani
+REC-10851,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-01-31,947,1250,14,620,Wednesday,January,Express
+REC-10852,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-01-31,984,1350,27,620,Wednesday,January,Express
+REC-10853,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-01-31,1146,1400,31,1950,Wednesday,January,Superfast
+REC-10854,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-01-31,1145,1450,5,1950,Wednesday,January,Superfast
+REC-10855,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-01-31,892,1200,2,1140,Wednesday,January,Express
+REC-10856,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-01-31,1061,1300,72,1140,Wednesday,January,Express
+REC-10857,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-01-31,927,1200,9,590,Wednesday,January,Express
+REC-10858,TR-16316,Mysuru Express,Kochi,Mysuru,2024-01-31,855,1100,17,590,Wednesday,January,Express
+REC-10859,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-01-31,987,1400,25,350,Wednesday,January,Superfast
+REC-10860,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-01-31,1100,1400,74,350,Wednesday,January,Superfast
+REC-10861,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-01-31,945,1200,4,490,Wednesday,January,Express
+REC-10862,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-01-31,898,1250,4,490,Wednesday,January,Express
+REC-10863,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-01-31,746,950,61,140,Wednesday,January,Shatabdi
+REC-10864,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-01-31,655,850,11,140,Wednesday,January,Shatabdi
+REC-10865,TR-12123,Deccan Queen,Mumbai,Pune,2024-01-31,785,1050,32,190,Wednesday,January,Superfast
+REC-10866,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-01-31,796,1000,57,190,Wednesday,January,Superfast
+REC-10867,TR-12841,Coromandel Express,Kolkata,Chennai,2024-01-31,1122,1380,31,1660,Wednesday,January,Superfast
+REC-10868,TR-12842,Coromandel Return,Chennai,Kolkata,2024-01-31,1175,1480,9,1660,Wednesday,January,Superfast
+REC-10869,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-02-01,1071,1200,21,2400,Thursday,February,Superfast
+REC-10870,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-02-01,1168,1300,1,2400,Thursday,February,Superfast
+REC-10871,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-02-01,909,1000,5,360,Thursday,February,Shatabdi
+REC-10872,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-02-01,810,950,11,360,Thursday,February,Shatabdi
+REC-10873,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-02-01,1202,1228,35,500,Thursday,February,Vande Bharat
+REC-10874,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-02-01,1170,1178,1,500,Thursday,February,Vande Bharat
+REC-10875,TR-12164,Chennai Express,Mumbai,Chennai,2024-02-01,1197,1400,9,1280,Thursday,February,Superfast
+REC-10876,TR-12163,Mumbai Express,Chennai,Mumbai,2024-02-01,1175,1350,35,1280,Thursday,February,Superfast
+REC-10877,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-02-01,933,1100,20,1380,Thursday,February,Rajdhani
+REC-10878,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-02-01,1098,1150,9,1380,Thursday,February,Rajdhani
+REC-10879,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-02-01,1133,1250,14,620,Thursday,February,Express
+REC-10880,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-02-01,1218,1350,15,620,Thursday,February,Express
+REC-10881,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-02-01,1301,1500,4,1950,Thursday,February,Superfast
+REC-10882,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-02-01,1133,1400,8,1950,Thursday,February,Superfast
+REC-10883,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-02-01,1116,1250,30,1140,Thursday,February,Express
+REC-10884,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-02-01,1013,1250,75,1140,Thursday,February,Express
+REC-10885,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-02-01,1013,1200,21,590,Thursday,February,Express
+REC-10886,TR-16316,Mysuru Express,Kochi,Mysuru,2024-02-01,1070,1200,9,590,Thursday,February,Express
+REC-10887,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-02-01,1186,1450,15,350,Thursday,February,Superfast
+REC-10888,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-02-01,1125,1400,8,350,Thursday,February,Superfast
+REC-10889,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-02-01,1035,1250,57,490,Thursday,February,Express
+REC-10890,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-02-01,993,1200,5,490,Thursday,February,Express
+REC-10891,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-02-01,935,950,44,140,Thursday,February,Shatabdi
+REC-10892,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-02-01,787,900,17,140,Thursday,February,Shatabdi
+REC-10893,TR-12123,Deccan Queen,Mumbai,Pune,2024-02-01,855,1050,172,190,Thursday,February,Superfast
+REC-10894,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-02-01,805,950,13,190,Thursday,February,Superfast
+REC-10895,TR-12841,Coromandel Express,Kolkata,Chennai,2024-02-01,1165,1430,67,1660,Thursday,February,Superfast
+REC-10896,TR-12842,Coromandel Return,Chennai,Kolkata,2024-02-01,1256,1480,45,1660,Thursday,February,Superfast
+REC-10897,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-02-02,1155,1250,4,2400,Friday,February,Superfast
+REC-10898,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-02-02,1248,1250,5,2400,Friday,February,Superfast
+REC-10899,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-02-02,1080,1000,70,360,Friday,February,Shatabdi
+REC-10900,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-02-02,972,900,27,360,Friday,February,Shatabdi
+REC-10901,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-02-02,1138,1128,10,500,Friday,February,Vande Bharat
+REC-10902,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-02-02,1326,1228,17,500,Friday,February,Vande Bharat
+REC-10903,TR-12164,Chennai Express,Mumbai,Chennai,2024-02-02,1351,1300,138,1280,Friday,February,Superfast
+REC-10904,TR-12163,Mumbai Express,Chennai,Mumbai,2024-02-02,1250,1350,42,1280,Friday,February,Superfast
+REC-10905,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-02-02,1111,1050,126,1380,Friday,February,Rajdhani
+REC-10906,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-02-02,1214,1150,6,1380,Friday,February,Rajdhani
+REC-10907,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-02-02,1262,1300,94,620,Friday,February,Express
+REC-10908,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-02-02,1356,1300,13,620,Friday,February,Express
+REC-10909,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-02-02,1506,1400,33,1950,Friday,February,Superfast
+REC-10910,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-02-02,1525,1500,8,1950,Friday,February,Superfast
+REC-10911,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-02-02,1317,1250,82,1140,Friday,February,Express
+REC-10912,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-02-02,1150,1200,2,1140,Friday,February,Express
+REC-10913,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-02-02,1022,1100,15,590,Friday,February,Express
+REC-10914,TR-16316,Mysuru Express,Kochi,Mysuru,2024-02-02,1088,1100,29,590,Friday,February,Express
+REC-10915,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-02-02,1287,1350,14,350,Friday,February,Superfast
+REC-10916,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-02-02,1455,1350,19,350,Friday,February,Superfast
+REC-10917,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-02-02,1354,1300,41,490,Friday,February,Express
+REC-10918,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-02-02,1236,1200,12,490,Friday,February,Express
+REC-10919,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-02-02,857,850,13,140,Friday,February,Shatabdi
+REC-10920,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-02-02,972,900,18,140,Friday,February,Shatabdi
+REC-10921,TR-12123,Deccan Queen,Mumbai,Pune,2024-02-02,1005,1000,45,190,Friday,February,Superfast
+REC-10922,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-02-02,1055,1000,6,190,Friday,February,Superfast
+REC-10923,TR-12841,Coromandel Express,Kolkata,Chennai,2024-02-02,1544,1430,6,1660,Friday,February,Superfast
+REC-10924,TR-12842,Coromandel Return,Chennai,Kolkata,2024-02-02,1395,1480,9,1660,Friday,February,Superfast
+REC-10925,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-02-03,1229,1250,50,2400,Saturday,February,Superfast
+REC-10926,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-02-03,1173,1250,35,2400,Saturday,February,Superfast
+REC-10927,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-02-03,1026,950,38,360,Saturday,February,Shatabdi
+REC-10928,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-02-03,1026,950,11,360,Saturday,February,Shatabdi
+REC-10929,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-02-03,1272,1178,6,500,Saturday,February,Vande Bharat
+REC-10930,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-02-03,1198,1178,43,500,Saturday,February,Vande Bharat
+REC-10931,TR-12164,Chennai Express,Mumbai,Chennai,2024-02-03,1347,1300,35,1280,Saturday,February,Superfast
+REC-10932,TR-12163,Mumbai Express,Chennai,Mumbai,2024-02-03,1294,1300,3,1280,Saturday,February,Superfast
+REC-10933,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-02-03,1188,1100,10,1380,Saturday,February,Rajdhani
+REC-10934,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-02-03,1090,1050,14,1380,Saturday,February,Rajdhani
+REC-10935,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-02-03,1275,1350,4,620,Saturday,February,Express
+REC-10936,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-02-03,1262,1250,50,620,Saturday,February,Express
+REC-10937,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-02-03,1456,1400,15,1950,Saturday,February,Superfast
+REC-10938,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-02-03,1574,1500,22,1950,Saturday,February,Superfast
+REC-10939,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-02-03,1219,1250,6,1140,Saturday,February,Express
+REC-10940,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-02-03,1251,1250,13,1140,Saturday,February,Express
+REC-10941,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-02-03,1089,1100,1,590,Saturday,February,Express
+REC-10942,TR-16316,Mysuru Express,Kochi,Mysuru,2024-02-03,1093,1150,9,590,Saturday,February,Express
+REC-10943,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-02-03,1458,1350,16,350,Saturday,February,Superfast
+REC-10944,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-02-03,1300,1400,31,350,Saturday,February,Superfast
+REC-10945,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-02-03,1221,1300,8,490,Saturday,February,Express
+REC-10946,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-02-03,1265,1250,22,490,Saturday,February,Express
+REC-10947,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-02-03,972,900,6,140,Saturday,February,Shatabdi
+REC-10948,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-02-03,918,850,11,140,Saturday,February,Shatabdi
+REC-10949,TR-12123,Deccan Queen,Mumbai,Pune,2024-02-03,916,950,10,190,Saturday,February,Superfast
+REC-10950,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-02-03,998,950,4,190,Saturday,February,Superfast
+REC-10951,TR-12841,Coromandel Express,Kolkata,Chennai,2024-02-03,1373,1380,3,1660,Saturday,February,Superfast
+REC-10952,TR-12842,Coromandel Return,Chennai,Kolkata,2024-02-03,1354,1430,33,1660,Saturday,February,Superfast
+REC-10953,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-02-04,1188,1250,29,2400,Sunday,February,Superfast
+REC-10954,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-02-04,1170,1250,18,2400,Sunday,February,Superfast
+REC-10955,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-02-04,1070,1000,24,360,Sunday,February,Shatabdi
+REC-10956,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-02-04,1080,1000,38,360,Sunday,February,Shatabdi
+REC-10957,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-02-04,1184,1178,7,500,Sunday,February,Vande Bharat
+REC-10958,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-02-04,1326,1228,41,500,Sunday,February,Vande Bharat
+REC-10959,TR-12164,Chennai Express,Mumbai,Chennai,2024-02-04,1308,1350,13,1280,Sunday,February,Superfast
+REC-10960,TR-12163,Mumbai Express,Chennai,Mumbai,2024-02-04,1346,1300,15,1280,Sunday,February,Superfast
+REC-10961,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-02-04,1117,1050,7,1380,Sunday,February,Rajdhani
+REC-10962,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-02-04,1100,1100,2,1380,Sunday,February,Rajdhani
+REC-10963,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-02-04,1281,1350,7,620,Sunday,February,Express
+REC-10964,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-02-04,1436,1350,12,620,Sunday,February,Express
+REC-10965,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-02-04,1366,1400,3,1950,Sunday,February,Superfast
+REC-10966,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-02-04,1563,1500,0,1950,Sunday,February,Superfast
+REC-10967,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-02-04,1213,1250,4,1140,Sunday,February,Express
+REC-10968,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-02-04,1236,1300,5,1140,Sunday,February,Express
+REC-10969,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-02-04,1193,1150,7,590,Sunday,February,Express
+REC-10970,TR-16316,Mysuru Express,Kochi,Mysuru,2024-02-04,1180,1150,64,590,Sunday,February,Express
+REC-10971,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-02-04,1328,1350,4,350,Sunday,February,Superfast
+REC-10972,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-02-04,1432,1450,14,350,Sunday,February,Superfast
+REC-10973,TR-12901,Gujarat Mail,Mumbai,Ahmedabad,2024-02-04,1174,1200,13,490,Sunday,February,Express
+REC-10974,TR-12902,Gujarat Mail Return,Ahmedabad,Mumbai,2024-02-04,1381,1300,47,490,Sunday,February,Express
+REC-10975,TR-12028,Shatabdi Express,Bengaluru,Mysuru,2024-02-04,1026,950,28,140,Sunday,February,Shatabdi
+REC-10976,TR-12027,Shatabdi Return,Mysuru,Bengaluru,2024-02-04,972,900,11,140,Sunday,February,Shatabdi
+REC-10977,TR-12123,Deccan Queen,Mumbai,Pune,2024-02-04,1130,1050,50,190,Sunday,February,Superfast
+REC-10978,TR-12124,Deccan Queen Return,Pune,Mumbai,2024-02-04,1023,1050,88,190,Sunday,February,Superfast
+REC-10979,TR-12841,Coromandel Express,Kolkata,Chennai,2024-02-04,1421,1380,10,1660,Sunday,February,Superfast
+REC-10980,TR-12842,Coromandel Return,Chennai,Kolkata,2024-02-04,1474,1480,1,1660,Sunday,February,Superfast
+REC-10981,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-02-05,1113,1300,5,2400,Monday,February,Superfast
+REC-10982,TR-12625,Karnataka Express Return,Delhi,Bengaluru,2024-02-05,978,1200,10,2400,Monday,February,Superfast
+REC-10983,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-02-05,842,900,4,360,Monday,February,Shatabdi
+REC-10984,TR-12008,Shatabdi Express Return,Bengaluru,Chennai,2024-02-05,828,950,34,360,Monday,February,Shatabdi
+REC-10985,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-02-05,1030,1178,8,500,Monday,February,Vande Bharat
+REC-10986,TR-20608,Vande Bharat Express Return,Mysuru,Chennai,2024-02-05,1081,1178,15,500,Monday,February,Vande Bharat
+REC-10987,TR-12164,Chennai Express,Mumbai,Chennai,2024-02-05,1260,1400,36,1280,Monday,February,Superfast
+REC-10988,TR-12163,Mumbai Express,Chennai,Mumbai,2024-02-05,1092,1350,3,1280,Monday,February,Superfast
+REC-10989,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-02-05,1138,1150,4,1380,Monday,February,Rajdhani
+REC-10990,TR-12952,Delhi Rajdhani,Delhi,Mumbai,2024-02-05,1090,1100,107,1380,Monday,February,Rajdhani
+REC-10991,TR-12785,Kacheguda Express,Bengaluru,Hyderabad,2024-02-05,1050,1300,15,620,Monday,February,Express
+REC-10992,TR-12786,Bengaluru Express,Hyderabad,Bengaluru,2024-02-05,1063,1350,11,620,Monday,February,Express
+REC-10993,TR-12295,Sanghamitra Express,Bengaluru,Kolkata,2024-02-05,1105,1400,1,1950,Monday,February,Superfast
+REC-10994,TR-12296,Sanghamitra Return,Kolkata,Bengaluru,2024-02-05,1324,1450,6,1950,Monday,February,Superfast
+REC-10995,TR-11301,Udyan Express,Mumbai,Bengaluru,2024-02-05,1063,1200,5,1140,Monday,February,Express
+REC-10996,TR-11302,Udyan Express Return,Bengaluru,Mumbai,2024-02-05,1059,1300,77,1140,Monday,February,Express
+REC-10997,TR-16315,Kochuveli Express,Mysuru,Kochi,2024-02-05,1016,1150,6,590,Monday,February,Express
+REC-10998,TR-16316,Mysuru Express,Kochi,Mysuru,2024-02-05,997,1100,14,590,Monday,February,Express
+REC-10999,TR-12727,Godavari Express,Hyderabad,Vijayawada,2024-02-05,1144,1450,25,350,Monday,February,Superfast
+REC-11000,TR-12728,Godavari Return,Vijayawada,Hyderabad,2024-02-05,1225,1350,89,350,Monday,February,Superfast

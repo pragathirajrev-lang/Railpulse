@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Analytics & Demand Forecasting - Project Presentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #0f172a;
+            color: #1e293b;
+        }
+
+        .slide-deck {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 24px;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100vh;
+            max-height: 210mm;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 42px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            page-break-after: always;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Slide Top Header */
+        .slide-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2.5px solid #2563eb;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .slide-title-group h2 {
+            font-size: 26px;
+            font-weight: 900;
+            color: #0f172a;
+            letter-spacing: -0.4px;
+        }
+
+        .slide-title-group .slide-subtitle {
+            font-size: 14px;
+            font-weight: 600;
+            color: #64748b;
+            margin-top: 3px;
+        }
+
+        .slide-badge {
+            background-color: #eff6ff;
+            color: #1d4ed8;
+            border: 1.5px solid #bfdbfe;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* Slide Content Area */
+        .slide-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        /* Slide Bottom Footer */
+        .slide-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1.5px solid #e2e8f0;
+            padding-top: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #64748b;
+        }
+
+        /* Title Slide Styling */
+        .slide.title-slide {
+            background: linear-gradient(135deg, #090e17 0%, #0f172a 60%, #1e3a8a 100%);
+            color: #ffffff;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px;
+        }
+
+        .title-slide h1 {
+            font-size: 38px;
+            font-weight: 900;
+            line-height: 1.25;
+            color: #ffffff;
+            margin-bottom: 18px;
+            max-width: 950px;
+        }
+
+        .title-slide .tech-tag {
+            background: rgba(37, 99, 235, 0.35);
+            color: #93c5fd;
+            border: 1.5px solid rgba(96, 165, 250, 0.5);
+            padding: 8px 18px;
+            border-radius: 24px;
+            font-size: 15px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+
+        .title-slide .subtitle {
+            font-size: 18px;
+            color: #cbd5e1;
+            margin-bottom: 36px;
+            max-width: 780px;
+            line-height: 1.5;
+        }
+
+        .title-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+            margin-top: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1.5px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .title-meta-item small {
+            display: block;
+            color: #94a3b8;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .title-meta-item strong {
+            font-size: 15px;
+            color: #f8fafc;
+        }
+
+        /* 2-Column Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        /* 3-Column Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        /* 4-Column Grid Layouts */
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        /* Card Elements */
+        .info-card {
+            background: #f8fafc;
+            border: 1.5px solid #cbd5e1;
+            border-left: 5px solid #2563eb;
+            border-radius: 10px;
+            padding: 16px 20px;
+        }
+
+        .info-card h4 {
+            font-size: 17px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .info-card p, .info-card ul {
+            font-size: 13.5px;
+            line-height: 1.5;
+            color: #334155;
+        }
+
+        .info-card ul {
+            padding-left: 18px;
+        }
+
+        .info-card li {
+            margin-bottom: 5px;
+        }
+
+        /* KPI Stat Pill */
+        .kpi-pill {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 14px 18px;
+            text-align: center;
+        }
+
+        .kpi-pill .val {
+            font-size: 26px;
+            font-weight: 900;
+            color: #2563eb;
+        }
+
+        .kpi-pill .lbl {
+            font-size: 12px;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        /* Tables in Slides */
+        .slide-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .slide-table th {
+            background-color: #1e293b;
+            color: #ffffff;
+            font-weight: 800;
+            padding: 10px 14px;
+            text-align: left;
+        }
+
+        .slide-table td {
+            padding: 9px 14px;
+            border-bottom: 1.5px solid #e2e8f0;
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        .slide-table tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        /* Speaker Note Box */
+        .speaker-box {
+            background: #fffbeb;
+            border: 1.5px solid #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: 11.5px;
+            color: #92400e;
+            line-height: 1.4;
+            margin-top: auto;
+        }
+
+        .speaker-box strong {
+            font-weight: 800;
+            color: #78350f;
+        }
+
+        /* Code & Preformatted Blocks */
+        pre.code-snippet {
+            background: #0f172a;
+            color: #38bdf8;
+            padding: 14px 18px;
+            border-radius: 8px;
+            font-family: Consolas, monospace;
+            font-size: 12px;
+            line-height: 1.45;
+            overflow-x: auto;
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+            .slide-deck {
+                padding: 0;
+                gap: 0;
+            }
+            .slide {
+                border-radius: 0;
+                box-shadow: none;
+                margin: 0;
+                height: 100vh;
+                max-height: none;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="slide-deck">
+
+    <!-- ================= SLIDE 1: TITLE SLIDE ================= -->
+    <div class="slide title-slide">
+        <span class="tech-tag">Big Data Technologies (BDT) Mini-Project • Java 21 & Apache Spark 3.5.1</span>
+        <h1>Large-Scale Railways Data Processing and Demand Forecasting</h1>
+        <p class="subtitle">An enterprise distributed intelligence platform engineered for historical passenger movement analysis, route performance evaluation, delay classification, and machine learning demand forecasting.</p>
+        
+        <div class="title-meta-grid">
+            <div class="title-meta-item">
+                <small>Domain</small>
+                <strong>Distributed Big Data & ML</strong>
+            </div>
+            <div class="title-meta-item">
+                <small>Dataset Scope</small>
+                <strong>10,248 Records across 28 Corridors</strong>
+            </div>
+            <div class="title-meta-item">
+                <small>Live Application</small>
+                <strong>http://localhost:8080</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 2: PROBLEM STATEMENT ================= -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-title-group">
+                <h2>1. Problem Statement & Research Objectives</h2>
+                <div class="slide-subtitle">Why traditional database systems fail on nationwide transportation datasets</div>
+            </div>
+            <span class="slide-badge">Academic Context</span>
+        </div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="info-card">
+                    <h4>The Core Transportation Problem</h4>
+                    <ul>
+                        <li><strong>Severe Seasonal Surges:</strong> Summer vacations and major festivals (Diwali, Chhath, Durga Puja) cause massive passenger waitlists and uncontrolled overcrowding.</li>
+                        <li><strong>Capacity Misallocation:</strong> High-density corridors experience seat shortages while secondary corridors run with empty coaches, wasting energy and rolling stock.</li>
+                        <li><strong>Junction Delay Cascading:</strong> Knock-on delays propagate across shared railway junctions without automated root-cause severity analysis.</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Why Big Data Technologies (BDT)?</h4>
+                    <ul>
+                        <li><strong>Relational Database Limitations:</strong> Traditional SQL queries (`GROUP BY` over millions of rows) suffer memory locks and lack in-memory distributed scalability.</li>
+                        <li><strong>Google Colab Prohibited:</strong> College academic guidelines mandate building an enterprise, standalone Java application running locally on Windows.</li>
+                        <li><strong>Our Solution:</strong> A 100% Java + Apache Spark 3.5.1 platform performing sub-second in-memory transformations and machine learning demand forecasting.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-box">
+            <strong>Speaker Notes:</strong> "Good morning evaluators. Indian Railways moves millions daily, but managing route capacity during festival surges is a major hurdle. Standard SQL databases crash under high velocity, so we built an end-to-end Apache Spark distributed platform using Java 21."
+        </div>
+        <div class="slide-footer">
+            <span>BDT Mini-Project: Railway Big Data Processing</span>
+            <span>Slide 2 / 12</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 3: TECH STACK ================= -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-title-group">
+                <h2>2. Complete Technology Stack & Academic Compliance</h2>
+                <div class="slide-subtitle">100% Java-based distributed architecture &mdash; zero Python, zero Google Colab</div>
+            </div>
+            <span class="slide-badge">Architecture</span>
+        </div>
+        <div class="slide-content">
+            <table class="slide-table">
+                <thead>
+                    <tr>
+                        <th>Architectural Layer</th>
+                        <th>Technology</th>
+                        <th>Version</th>
+                        <th>Technical Purpose & Justification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Primary Language</strong></td>
+                        <td>Java Development Kit (JDK)</td>
+                        <td><strong>Java 21 LTS</strong></td>
+                        <td>Mandated language; eliminates Py4J serialization latency; ensures strongly-typed Spark integration.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Big Data Engine</strong></td>
+                        <td>Apache Spark (Java API)</td>
+                        <td><strong>3.5.1</strong></td>
+                        <td>Executes distributed in-memory DataFrame transformations and Catalyst query plan optimizations.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Machine Learning</strong></td>
+                        <td>Spark MLlib</td>
+                        <td><strong>3.5.1</strong></td>
+                        <td>Distributed `VectorAssembler` and `RandomForestRegressor` for chronological 7-day passenger forecasting.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Web Framework</strong></td>
+                        <td>Spring Boot</td>
+                        <td><strong>3.2.5</strong></td>
+                        <td>REST API microservices, dependency injection, and static web dashboard delivery.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Database Layer</strong></td>
+                        <td>MySQL 8.x + Embedded H2</td>
+                        <td><strong>8.0 / 2.2</strong></td>
+                        <td>MySQL 8.x with automatic failover to embedded H2 (MySQL mode) for zero-error evaluations.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Windows Native I/O</strong></td>
+                        <td>Hadoop WinUtils</td>
+                        <td><strong>3.3.5</strong></td>
+                        <td>Bundled `winutils.exe` & `hadoop.dll` under `./hadoop/bin` for Windows POSIX filesystem emulation.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Presentation UI</strong></td>
+                        <td>HTML5, Bootstrap, Chart.js</td>
+                        <td><strong>4.4.2</strong></td>
+                        <td>Deep Navy theme with 130% Presentation Mode and High-DPI 2.5x canvas charts.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="speaker-box">
+            <strong>Speaker Notes:</strong> "We adhered strictly to academic constraints: No Python or Colab was used. Everything is compiled in Java 21 LTS with Apache Spark 3.5.1 running locally across CPU worker threads."
+        </div>
+        <div class="slide-footer">
+            <span>BDT Mini-Project: Railway Big Data Processing</span>
+            <span>Slide 3 / 12</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 4: ARCHITECTURE ================= -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-title-group">
+                <h2>3. Multi-Tier Distributed Architecture</h2>
+                <div class="slide-subtitle">Clear separation of presentation, microservice REST APIs, and Spark execution</div>
+            </div>
+            <span class="slide-badge">Design</span>
+        </div>
+        <div class="slide-content">
+            <div class="grid-4">
+                <div class="info-card">
+                    <h4>1. Client UI Tier</h4>
+                    <ul>
+                        <li>Single Page Application (SPA).</li>
+                        <li>11 Working Modules.</li>
+                        <li>High-DPI Chart.js Visualizations.</li>
+                        <li>130% Presentation Scale Switcher.</li>
+                        <li>Printable PDF Report Generator.</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>2. Spring Boot Tier</h4>
+                    <ul>
+                        <li>9 REST Controller Endpoints.</li>
+                        <li>Spring Data JPA Repositories.</li>
+                        <li>Multipart CSV Upload Handling.</li>
+                        <li>Pre-Ingestion Schema Validation.</li>
+                        <li>Smart Decision Rule Engine.</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>3. Spark Big Data Tier</h4>
+                    <ul>
+                        <li>`SparkSession` master: `local[*]`.</li>
+                        <li>In-Memory Cached DataFrames.</li>
+                        <li>Catalyst Query Optimization.</li>
+                        <li>4 Parallel RDD Partitions.</li>
+                        <li>Spark MLlib Regression Pipeline.</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>4. Data Storage Tier</h4>
+                    <ul>
+                        <li>10,248 Row Annual Dataset.</li>
+                        <li>MySQL Relational Schema.</li>
+                        <li>Embedded H2 Auto-Fallback.</li>
+                        <li>Hadoop FileSystem Abstraction.</li>
+                        <li>CSV Export Generation.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-box">
+            <strong>Speaker Notes:</strong> "Our four-tier architecture decouples UI from data processing. Spring Boot serves RESTful JSON endpoints while Apache Spark handles all aggregations and machine learning directly in RAM."
+        </div>
+        <div class="slide-footer">
+            <span>BDT Mini-Project: Railway Big Data Processing</span>
+            <span>Slide 4 / 12</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 5: DATASET ENGINEERING ================= -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-title-group">
+                <h2>4. Dataset Engineering & 13-Column Schema</h2>
+                <div class="slide-subtitle">10,248 trip records covering all 366 days of 2024 across 28 Indian Railway corridors</div>
+            </div>
+            <span class="slide-badge">Data Layer</span>
+        </div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div>
+                    <table class="slide-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Column Name</th>
+                                <th>Data Type</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>`record_id`</td><td>String (PK)</td><td>`REC-10001`</td></tr>
+                            <tr><td>2</td><td>`train_id`</td><td>String</td><td>`TR-12626`</td></tr>
+                            <tr><td>3</td><td>`train_name`</td><td>String</td><td>`Karnataka Express`</td></tr>
+                            <tr><td>4</td><td>`source_station`</td><td>String</td><td>`Bengaluru`</td></tr>
+                            <tr><td>5</td><td>`destination_station`</td><td>String</td><td>`Delhi`</td></tr>
+                            <tr><td>6</td><td>`travel_date`</td><td>Date (ISO)</td><td>`2024-05-18`</td></tr>
+                            <tr><td>7</td><td>`passenger_count`</td><td>Integer</td><td>`1,280`</td></tr>
+                            <tr><td>8</td><td>`train_capacity`</td><td>Integer</td><td>`1,200`</td></tr>
+                            <tr><td>9</td><td>`delay_minutes`</td><td>Integer</td><td>`35`</td></tr>
+                            <tr><td>10</td><td>`distance_km`</td><td>Integer</td><td>`2,400`</td></tr>
+                            <tr><td>11</td><td>`day_of_week`</td><td>String</td><td>`Saturday`</td></tr>
+                            <tr><td>12</td><td>`month`</td><td>String</td><td>`May`</td></tr>
+                            <tr><td>13</td><td>`train_category`</td><td>String</td><td>`Superfast`</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="info-card">
+                    <h4>Realistic Transportation Modeling</h4>
+                    <ul>
+                        <li><strong>Full 12 Calendar Months:</strong> Jan 1, 2024 to Dec 31, 2024 (366 leap days &times; 28 routes = <strong>10,248 records</strong>).</li>
+                        <li><strong>11 Major Junctions:</strong> Bengaluru, Chennai, Mumbai, Delhi, Kolkata, Hyderabad, Pune, Mysuru, Kochi, Vijayawada, Ahmedabad.</li>
+                        <li><strong>Summer Vacation Surge:</strong> +15% demand in May & June.</li>
+                        <li><strong>Festive Rush Peaks:</strong> +22% demand in October (Dussehra) & November (Diwali/Chhath).</li>
+                        <li><strong>Weekend Multiplier:</strong> +18% ridership on Fri, Sat, Sun.</li>
+                        <li><strong>Weather Delays:</strong> North Indian fog delays in Dec/Jan.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-box">
+            <strong>Speaker Notes:</strong> "Notice our dataset has exactly 10,248 records spanning all 12 calendar months. We modeled realistic seasonal vacation surges, festival rushes, and monsoon dips to ensure real-world academic validity."
+        </div>
+        <div class="slide-footer">
+            <span>BDT Mini-Project: Railway Big Data Processing</span>
+            <span>Slide 5 / 12</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 6: DASHBOARDS & ANALYTICS ================= -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-title-group">
+                <h2>5. Executive Dashboard & Passenger Analytics</h2>
+                <div class="slide-subtitle">Live KPIs and multi-criteria exploratory filtering over 11.64 million passengers</div>
+            </div>
+            <span class="slide-badge">Module 1 & 2</span>
+        </div>
+        <div class="slide-content">
+            <div class="grid-4" style="margin-bottom: 12px;">
+                <div class="kpi-pill"><div class="val">10,248</div><div class="lbl">Total Records</div></div>
+                <div class="kpi-pill"><div class="val">11.64M</div><div class="lbl">Total Passengers</div></div>
+                <div class="kpi-pill"><div class="val">93.97%</div><div class="lbl">Avg Occupancy</div></div>
+                <div class="kpi-pill"><div class="val">25.7 min</div><div class="lbl">Avg Delay</div></div>
+            </div>
+            <div class="grid-2">
+                <div class="info-card">
+                    <h4>Module 1: Executive Dashboard</h4>
+                    <ul>
+                        <li><strong>Traffic Volume Trend:</strong> 560px line chart showing daily ridership waves.</li>
+                        <li><strong>Occupancy Status Donut:</strong> 4 utilization tiers proving 61.9% of trips are critical.</li>
+                        <li><strong>Corridor Rankings:</strong> Top 7 heaviest routes (Bengaluru &rarr; Kolkata is #1).</li>
+                        <li><strong>12-Month Distribution:</strong> Complete bars Jan–Dec showing festival peaks.</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Module 2: Passenger Analytics</h4>
+                    <ul>
+                        <li><strong>Multi-Parameter Filter:</strong> Filter by Source, Destination, Train ID, Month, Dates.</li>
+                        <li><strong>Manifest Database Table:</strong> Real-time filtered manifest records from JPA.</li>
+                        <li><strong>Seasonality Analysis:</strong> Visualizes seasonal dips vs holiday quarters.</li>
+                        <li><strong>Weekday vs. Weekend Pattern:</strong> Highlights Friday–Sunday passenger surges.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-box">
+            <strong>Speaker Notes:</strong> "Module 1 displays live aggregate KPIs across 11.6 million passengers. Module 2 provides multi-criteria filtering across all stations and trains, clearly highlighting weekend and festival travel surges."
+        </div>
+        <div class="slide-footer">
+            <span>BDT Mini-Project: Railway Big Data Processing</span>
+            <span>Slide 6 / 12</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 7: FORECASTING MLLIB ================= -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-title-group">
+                <h2>6. Spark MLlib Demand Forecasting Pipeline</h2>
+                <div class="slide-subtitle">Random Forest regression with strict chronological train/test separation</div>
+            </div>
+            <span class="slide-badge">Module 4: ML</span>
+        </div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="info-card">
+                    <h4>Machine Learning Pipeline</h4>
+                    <ul>
+                        <li><strong>Algorithm:</strong> Apache Spark MLlib `RandomForestRegressor` (25 decision trees, max depth 5).</li>
+                        <li><strong>Feature Vector Assembler:</strong>
+                            <pre class="code-snippet">[dow, month, dom, weekend_flag, distance_km, capacity]</pre>
+                        </li>
+                        <li><strong>Strict Chronological Split:</strong> Earliest 80% records used for training; subsequent 20% held out for evaluation.</li>
+                        <li><strong>Zero Data Leakage:</strong> Eliminates future-to-past temporal contamination.</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Evaluation Metrics & Projections</h4>
+                    <ul>
+                        <li><strong>MAE (Mean Absolute Error):</strong> ~30–40 passengers on 1,500-seat rakes.</li>
+                        <li><strong>$R^2$ Score (Goodness of Fit):</strong> <strong>$R^2 > 0.88$</strong> on high-volume routes.</li>
+                        <li><strong>Triple-Curve Visualization (620px):</strong>
+                            <br>• Blue = Ground truth historical demand.
+                            <br>• Purple = MLlib test predictions on held-out dates.
+                            <br>• Emerald = Upcoming 7-day future projections.</li>
+                        <li><strong>7-Day Advisory:</strong> Recommends coach rake sizing (14–16 coaches).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-box">
+            <strong>Speaker Notes:</strong> "Module 4 implements true machine learning with Spark MLlib. Unlike naive random splits, we order data chronologically to guarantee zero data leakage. Our Random Forest model achieves an R² above 0.88."
+        </div>
+        <div class="slide-footer">
+            <span>BDT Mini-Project: Railway Big Data Processing</span>
+            <span>Slide 7 / 12</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 8: DELAY & OCCUPANCY ================= -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-title-group">
+                <h2>7. Train Delay & Coach Occupancy Analysis</h2>
+                <div class="slide-subtitle">Standardized punctuality benchmarks and 4-tier capacity utilization mapping</div>
+            </div>
+            <span class="slide-badge">Module 5 & 6</span>
+        </div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="info-card">
+                    <h4>Module 5: Delay & Punctuality Analysis</h4>
+                    <ul>
+                        <li><strong>Punctuality Standard:</strong> Benchmarked against the Indian Railways $\le 15\text{ min}$ on-time threshold (Network on-time rate: 56.5%).</li>
+                        <li><strong>Bottleneck Identification:</strong> Pinpoints chronic delays (e.g. Gujarat Mail, 31.2 mins avg delay) for track audits.</li>
+                        <li><strong>Benchmark Punctual Services:</strong> Highlights top-performing rakes.</li>
+                        <li><strong>Delay Severity Donut (540px):</strong> Punctual (&le;15m), Minor (16-45m), Moderate (46-90m), Severe (>90m).</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Module 6: Coach Occupancy Analysis</h4>
+                    <ul>
+                        <li><strong>Capacity Formula:</strong>
+                            <pre class="code-snippet">Occupancy % = (Passenger Count / Train Capacity) &times; 100</pre>
+                        </li>
+                        <li><strong>4 Operational Tiers:</strong>
+                            <br>• Low (&lt;50%) | Moderate (50-75%)
+                            <br>• High (75-90%) | Critical (>90%)
+                        </li>
+                        <li><strong>Congestion Alerts:</strong> Flags routes with &ge;85% occupancy.</li>
+                        <li><strong>Underutilization Alerts:</strong> Identifies routes &lt;60% occupancy.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-box">
+            <strong>Speaker Notes:</strong> "Modules 5 and 6 solve operational bottlenecks. We evaluate train delays against the official 15-minute standard and classify occupancy into 4 tiers to determine where coaches should be added or detached."
+        </div>
+        <div class="slide-footer">
+            <span>BDT Mini-Project: Railway Big Data Processing</span>
+            <span>Slide 8 / 12</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 9: RECOMMENDATIONS & ETL ================= -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-title-group">
+                <h2>8. Decision Support Recommendations & CSV ETL Pipeline</h2>
+                <div class="slide-subtitle">Translating Big Data into actionable management directives and dynamic ingestion</div>
+            </div>
+            <span class="slide-badge">Module 7 & 8</span>
+        </div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="info-card">
+                    <h4>Module 7: Smart Recommendations Engine</h4>
+                    <ul>
+                        <li><strong>Automated Rule Engine:</strong> Translates Spark metrics into clear managerial directives.</li>
+                        <li><strong>Priority Tiers:</strong> `CRITICAL`, `HIGH`, `MEDIUM`.</li>
+                        <li><strong>Actionable Prescriptions:</strong>
+                            <br>• Attach +2 LHB 3-Tier AC coaches on routes with >95% occupancy.
+                            <br>• Conduct track & signaling audits on chronic delay corridors (>30m).
+                            <br>• Rationalize timetables and detach empty rakes on low-demand trains.
+                        </li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Module 8: Dataset Management & CSV ETL</h4>
+                    <ul>
+                        <li><strong>Active Dataset Health:</strong> Monitors 10,248 in-memory records.</li>
+                        <li><strong>Drag-and-Drop Ingestion:</strong> Upload custom railway datasets.</li>
+                        <li><strong>13-Column Schema Validator:</strong> Verifies headers, nulls, duplicate keys, and date formats.</li>
+                        <li><strong>Live 10-Row Preview:</strong> Pre-inspect data before committing to Spark.</li>
+                        <li><strong>Dynamic Spark Reload:</strong> Triggers DataFrame re-processing in RAM.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-box">
+            <strong>Speaker Notes:</strong> "Our platform does not stop at charts; Module 7 generates prioritized management directives. Module 8 provides an enterprise ETL pipeline to upload and validate external CSV callsets dynamically."
+        </div>
+        <div class="slide-footer">
+            <span>BDT Mini-Project: Railway Big Data Processing</span>
+            <span>Slide 9 / 12</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 10: WHAT-IF SIMULATOR ================= -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-title-group">
+                <h2>9. Interactive What-If Capacity Simulator</h2>
+                <div class="slide-subtitle">Simulate holiday passenger surges and extra coach additions before physical deployment</div>
+            </div>
+            <span class="slide-badge">Module 10</span>
+        </div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="info-card">
+                    <h4>Simulation Inputs & Controls</h4>
+                    <ul>
+                        <li><strong>Corridor Selector:</strong> Choose any of the 28 active railway corridors.</li>
+                        <li><strong>Holiday Demand Surge Slider:</strong> Adjust simulated rush from +0% to +100% (Diwali/Chhath/Summer rush).</li>
+                        <li><strong>Extra Coaches Attachment Selector:</strong> Choose 0 to +6 LHB coaches (+72 to +432 berths).</li>
+                        <li><strong>Instant Spark Recalculation:</strong> Evaluates augmented capacity against surge demand in real time.</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Simulated Operational Outcomes</h4>
+                    <ul>
+                        <li><strong>Simulated Demand:</strong> Baseline volume &times; $(1 + \text{Surge \%})$.</li>
+                        <li><strong>Augmented Capacity:</strong> Baseline capacity $+$ extra coach berths.</li>
+                        <li><strong>Projected Occupancy %:</strong> Instant saturation rate preview.</li>
+                        <li><strong>Unmet Passenger Spillover:</strong> Predicts station waitlist counts.</li>
+                        <li><strong>Incremental Revenue:</strong> Extra tickets sold &times; route fare.</li>
+                        <li><strong>AI Operational Advisory:</strong> Confirms if rake size is adequate or if clone trains are needed.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-box">
+            <strong>Speaker Notes:</strong> "Module 10 is our scenario simulator. Railway managers can test festival rushes virtually. It simulates adding extra coaches, predicting resulting occupancy, passenger spillover, and ticket revenue."
+        </div>
+        <div class="slide-footer">
+            <span>BDT Mini-Project: Railway Big Data Processing</span>
+            <span>Slide 10 / 12</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 11: SPARK PROFILER ================= -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-title-group">
+                <h2>10. Apache Spark Engine Profiler (Proving Big Data Execution)</h2>
+                <div class="slide-subtitle">Live extraction of the Catalyst Optimizer Physical Execution Plan DAG and RDD partitions</div>
+            </div>
+            <span class="slide-badge">Module 11: Spark Internals</span>
+        </div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="info-card">
+                    <h4>Catalyst Optimizer Physical Plan DAG</h4>
+                    <pre class="code-snippet">
+AdaptiveSparkPlan isFinalPlan=true
++- == Final Plan ==
+   *(2) HashAggregate(keys=[route#12], functions=[sum(passengers#16)])
+   +- Exchange hashpartitioning(route#12, 200)
+      +- *(1) HashAggregate(keys=[route#12], functions=[partial_sum(passengers#16)])
+         +- *(1) Project [route#12, passengers#16]
+            +- *(1) Filter (isnotnull(passengers#16))
+               +- FileScan csv [route#12, passengers#16]
+                    </pre>
+                    <p style="font-size: 12px; margin-top: 8px; color: #475569;">Proves predicate pushdown, whole-stage codegen, and in-memory aggregation.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Cluster Runtime & In-Memory RDDs</h4>
+                    <ul>
+                        <li><strong>Spark Master:</strong> Confirms `local[*]` running on Java 21 LTS.</li>
+                        <li><strong>Parallelism:</strong> Spawns executor threads matching physical CPU cores.</li>
+                        <li><strong>JVM Heap Memory:</strong> Live tracking of used vs allocated heap space.</li>
+                        <li><strong>RDD Partition Roster:</strong> Proves 10,248 dataset rows are balanced across 4 in-memory partitions (<strong>2,562 records per partition</strong>).</li>
+                        <li><strong>Sub-Second Execution:</strong> Caches DataFrames for instant query responses.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="speaker-box">
+            <strong>Speaker Notes:</strong> "Module 11 proves this is a genuine Big Data project. Here we extract Spark's internal Catalyst execution DAG showing HashAggregate and Exchange stages, along with 4 RDD partitions storing 2,562 rows each."
+        </div>
+        <div class="slide-footer">
+            <span>BDT Mini-Project: Railway Big Data Processing</span>
+            <span>Slide 11 / 12</span>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 12: CONCLUSION ================= -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-title-group">
+                <h2>11. Conclusion & Key Academic Achievements</h2>
+                <div class="slide-subtitle">A complete, fully verified, production-grade Big Data platform running locally on Windows</div>
+            </div>
+            <span class="slide-badge">Conclusion</span>
+        </div>
+        <div class="slide-content">
+            <div class="grid-3">
+                <div class="info-card">
+                    <h4>1. Big Data Engineering</h4>
+                    <ul>
+                        <li>100% Java 21 implementation.</li>
+                        <li>10,248 records across 12 months.</li>
+                        <li>Genuine Spark DataFrames.</li>
+                        <li>Catalyst Query Optimization.</li>
+                        <li>4 In-Memory RDD partitions.</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>2. Machine Learning</h4>
+                    <ul>
+                        <li>Spark MLlib Random Forest.</li>
+                        <li>Chronological 80/20 train/test.</li>
+                        <li>Zero future-data leakage.</li>
+                        <li>MAE, RMSE, and $R^2 > 0.88$.</li>
+                        <li>7-day demand projections.</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>3. Operational Value</h4>
+                    <ul>
+                        <li>11 working dashboard modules.</li>
+                        <li>What-If scenario simulator.</li>
+                        <li>Smart decision directives.</li>
+                        <li>130% presentation mode.</li>
+                        <li>Printable PDF & CSV reports.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-card" style="margin-top: 14px; text-align: center; background: #eff6ff; border-color: #3b82f6;">
+                <h4 style="color: #1d4ed8; margin-bottom: 4px;">Live Application Ready for Demonstration</h4>
+                <p style="font-size: 14px; color: #1e40af; font-weight: 700;">URL: http://localhost:8080 &bull; Automated Test Suite: .\test-app.ps1 &bull; 100% Tests Passing</p>
+            </div>
+        </div>
+        <div class="speaker-box">
+            <strong>Speaker Notes:</strong> "In conclusion, our platform delivers an end-to-end Big Data solution strictly meeting all academic guidelines. We thank our guide and evaluators, and we are now ready for live demonstration and questions."
+        </div>
+        <div class="slide-footer">
+            <span>BDT Mini-Project: Railway Big Data Processing</span>
+            <span>Slide 12 / 12</span>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

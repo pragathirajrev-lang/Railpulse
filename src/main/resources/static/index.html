@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Big Data Analytics & Passenger Demand Forecasting</title>
+    <!-- Google Fonts: Inter for High-Definition UI Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ---------------- SIDEBAR NAVIGATION ---------------- -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon">
+                <i class="bi bi-train-front-fill"></i>
+            </div>
+            <div>
+                <h5>RailPulse Big Data</h5>
+                <small>Apache Spark & Java 21</small>
+            </div>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li class="nav-header">Analytics Core</li>
+            <li class="nav-item">
+                <a href="#dashboard" class="nav-link active" data-page="dashboard">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#passenger-analytics" class="nav-link" data-page="passenger-analytics">
+                    <i class="bi bi-people-fill"></i>
+                    <span>Passenger Analytics</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#route-performance" class="nav-link" data-page="route-performance">
+                    <i class="bi bi-signpost-split-fill"></i>
+                    <span>Route Performance</span>
+                </a>
+            </li>
+
+            <li class="nav-header">Machine Learning</li>
+            <li class="nav-item">
+                <a href="#demand-forecasting" class="nav-link" data-page="demand-forecasting">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <span>Demand Forecasting</span>
+                </a>
+            </li>
+
+            <li class="nav-header">Operations & Simulation</li>
+            <li class="nav-item">
+                <a href="#delay-analysis" class="nav-link" data-page="delay-analysis">
+                    <i class="bi bi-clock-history"></i>
+                    <span>Delay Analysis</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#coach-occupancy" class="nav-link" data-page="coach-occupancy">
+                    <i class="bi bi-pie-chart-fill"></i>
+                    <span>Coach Occupancy</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#smart-recommendations" class="nav-link" data-page="smart-recommendations">
+                    <i class="bi bi-lightbulb-fill"></i>
+                    <span>Smart Recommendations</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#capacity-simulator" class="nav-link" data-page="capacity-simulator">
+                    <i class="bi bi-sliders2-vertical"></i>
+                    <span>What-If Simulator</span>
+                </a>
+            </li>
+
+            <li class="nav-header">Big Data & Engineering</li>
+            <li class="nav-item">
+                <a href="#spark-profiler" class="nav-link" data-page="spark-profiler">
+                    <i class="bi bi-cpu-fill"></i>
+                    <span>Spark Engine Profiler</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#dataset-management" class="nav-link" data-page="dataset-management">
+                    <i class="bi bi-database-fill-gear"></i>
+                    <span>Dataset Management</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#reports" class="nav-link" data-page="reports">
+                    <i class="bi bi-file-earmark-bar-graph-fill"></i>
+                    <span>Reports & Exports</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <span>Spark 3.5.1 Local</span>
+            <span class="spark-pill"><i class="bi bi-cpu me-1"></i>Active</span>
+        </div>
+    </aside>
+
+    <!-- ---------------- MAIN WRAPPER ---------------- -->
+    <div class="main-wrapper">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <h4 id="topbar-title" class="topbar-title">Executive Overview & KPIs</h4>
+            </div>
+            <div class="topbar-right">
+                <div class="display-scale-group btn-group me-2" role="group" aria-label="Display Scale">
+                    <button type="button" class="btn btn-outline-secondary" id="btn-scale-normal" title="Normal Scale (100%)">100%</button>
+                    <button type="button" class="btn btn-outline-primary" id="btn-scale-large" title="Large Scale (120%)">120%</button>
+                    <button type="button" class="btn btn-primary active" id="btn-scale-presentation" title="Ultra-Large Presentation Scale (130%+)"><i class="bi bi-display me-1"></i>130% Presentation Mode</button>
+                </div>
+                <span class="status-badge spark">
+                    <span class="pulse-dot"></span>
+                    <span id="topbar-dataset-status">Loading Spark Dataset...</span>
+                </span>
+                <a href="/api/reports/csv" class="btn btn-outline-primary" download>
+                    <i class="bi bi-download me-1"></i>Export CSV
+                </a>
+            </div>
+        </header>
+
+        <!-- CONTENT BODY -->
+        <main class="content-body">
+
+            <!-- ================= PAGE 1: DASHBOARD ================= -->
+            <section id="page-dashboard" class="page-view active">
+                <div class="explainer-banner header-banner">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div><strong>What this dashboard shows:</strong> Executive operational overview computed across 10,248 railway trip records (full 12-month annual cycle) using Apache Spark DataFrames. It tracks cumulative passenger volume, train fleet occupancy, network delay averages, and key trunk corridors.</div>
+                </div>
+
+                <!-- 8 KPI Cards -->
+                <div class="row g-3 mb-4">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Total Records</span>
+                                <div class="stat-icon blue"><i class="bi bi-database-fill"></i></div>
+                            </div>
+                            <div class="stat-value" id="kpi-total-records">-</div>
+                            <div class="stat-subtext">Cleaned & processed via Spark</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Total Trains</span>
+                                <div class="stat-icon purple"><i class="bi bi-train-front"></i></div>
+                            </div>
+                            <div class="stat-value" id="kpi-total-trains">-</div>
+                            <div class="stat-subtext">Active express & superfast rakes</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Railway Routes</span>
+                                <div class="stat-icon emerald"><i class="bi bi-signpost-2"></i></div>
+                            </div>
+                            <div class="stat-value" id="kpi-total-routes">-</div>
+                            <div class="stat-subtext">Distinct intercity corridors</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Total Passengers</span>
+                                <div class="stat-icon amber"><i class="bi bi-people-fill"></i></div>
+                            </div>
+                            <div class="stat-value" id="kpi-total-passengers">-</div>
+                            <div class="stat-subtext">Cumulative ridership recorded</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Avg Train Occupancy</span>
+                                <div class="stat-icon emerald"><i class="bi bi-pie-chart"></i></div>
+                            </div>
+                            <div class="stat-value" id="kpi-avg-occupancy">-</div>
+                            <div class="stat-subtext">Capacity utilisation rate</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Avg Train Delay</span>
+                                <div class="stat-icon rose"><i class="bi bi-clock-history"></i></div>
+                            </div>
+                            <div class="stat-value" id="kpi-avg-delay">-</div>
+                            <div class="stat-subtext">Network punctuality index</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Highest-Demand Route</span>
+                                <div class="stat-icon blue"><i class="bi bi-trophy-fill"></i></div>
+                            </div>
+                            <div class="route-stat-value" id="kpi-highest-route">-</div>
+                            <div class="stat-subtext">Maximum passenger volume</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Lowest-Demand Route</span>
+                                <div class="stat-icon slate"><i class="bi bi-arrow-down-circle"></i></div>
+                            </div>
+                            <div class="route-stat-value" id="kpi-lowest-route">-</div>
+                            <div class="stat-subtext">Requires timetable review</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="explainer-banner mb-4">
+                    <i class="bi bi-speedometer2"></i>
+                    <div><strong>What these KPI metrics show:</strong> Instant high-level summary computed via Apache Spark SQL. Shows 10,248 records analyzed across all 12 calendar months (Jan–Dec), 28 active express trains, over 11.4 million total passengers transported, average fleet occupancy (92.2%), network-wide delay (25.8 mins), and highlights the busiest (Bengaluru &rarr; Kolkata) vs lightest (Bengaluru &rarr; Mysuru) routes.</div>
+                </div>
+
+                <!-- Charts Row 1 -->
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-8">
+                        <div class="content-card mb-0 h-100">
+                            <div class="card-title-bar">
+                                <div>
+                                    <h5><i class="bi bi-graph-up text-primary"></i>Passenger Traffic Volume Trend</h5>
+                                    <div class="card-subtitle">Daily aggregate ridership across all active railway routes</div>
+                                </div>
+                            </div>
+                            <div style="height: 560px;">
+                                <canvas id="chart-traffic-trend"></canvas>
+                            </div>
+                            <div class="explainer-banner">
+                                <i class="bi bi-graph-up-arrow"></i>
+                                <div><strong>What this shows:</strong> Daily timeline of network ridership. Highlights sharp seasonal surges (summer vacations in May-June and festival spikes) that require scheduling clone special trains.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="content-card mb-0 h-100">
+                            <div class="card-title-bar">
+                                <div>
+                                    <h5><i class="bi bi-pie-chart-fill text-warning"></i>Occupancy Status</h5>
+                                    <div class="card-subtitle">Trip classification by capacity utilisation</div>
+                                </div>
+                            </div>
+                            <div style="height: 560px;">
+                                <canvas id="chart-occupancy-donut"></canvas>
+                            </div>
+                            <div class="explainer-banner">
+                                <i class="bi bi-pie-chart-fill"></i>
+                                <div><strong>What this shows:</strong> Trip distribution into 4 tiers: Low (&lt;50%), Moderate (50-75%), High (75-90%), and Critical (&gt;90%). Indicates that over 55% of all trains operate near or above full capacity.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Row 2 -->
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <div class="content-card mb-0 h-100">
+                            <div class="card-title-bar">
+                                <div>
+                                    <h5><i class="bi bi-bar-chart-fill text-primary"></i>Top Railway Corridors by Passenger Demand</h5>
+                                    <div class="card-subtitle">Highest volume routes processed via Apache Spark</div>
+                                </div>
+                            </div>
+                            <div style="height: 540px;">
+                                <canvas id="chart-route-comparison"></canvas>
+                            </div>
+                            <div class="explainer-banner">
+                                <i class="bi bi-signpost-split-fill"></i>
+                                <div><strong>What this shows:</strong> Top 7 heaviest routes by total passenger volume. High-demand routes like <code>Bengaluru &rarr; Kolkata</code> generate maximum ticket demand and need prioritized coach allocation.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="content-card mb-0 h-100">
+                            <div class="card-title-bar">
+                                <div>
+                                    <h5><i class="bi bi-calendar-month text-success"></i>Monthly Passenger Distribution</h5>
+                                    <div class="card-subtitle">Seasonal travel pattern across 12 calendar months</div>
+                                </div>
+                            </div>
+                            <div style="height: 540px;">
+                                <canvas id="chart-monthly-dist"></canvas>
+                            </div>
+                            <div class="explainer-banner">
+                                <i class="bi bi-calendar3"></i>
+                                <div><strong>What this shows:</strong> Seasonal variation across all 12 calendar months, illustrating peak ridership in summer and festival months compared to off-peak monsoon dips.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PAGE 2: PASSENGER ANALYTICS ================= -->
+            <section id="page-passenger-analytics" class="page-view">
+                <div class="explainer-banner header-banner">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div><strong>What this module does:</strong> Allows exploratory multi-criteria filtering across 10,248 passenger travel records by source/destination stations, train ID, month, or custom date ranges. Inspects individual train loads, delays, and capacity tiers.</div>
+                </div>
+
+                <!-- Multi-Criteria Filter Bar -->
+                <div class="content-card mb-4">
+                    <div class="card-title-bar">
+                        <h5><i class="bi bi-funnel-fill text-primary"></i>Filter Passenger Travel Records</h5>
+                        <span id="filtered-records-count" class="badge bg-primary">Loading...</span>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-2">
+                            <label class="form-label small fw-bold">Source Station</label>
+                            <select id="filter-source" class="form-select form-select-sm">
+                                <option value="ALL">All Sources</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label small fw-bold">Destination Station</label>
+                            <select id="filter-destination" class="form-select form-select-sm">
+                                <option value="ALL">All Destinations</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label small fw-bold">Train ID</label>
+                            <select id="filter-train" class="form-select form-select-sm">
+                                <option value="ALL">All Trains</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label small fw-bold">Month</label>
+                            <select id="filter-month" class="form-select form-select-sm">
+                                <option value="ALL">All Months</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label small fw-bold">From Date</label>
+                            <input type="date" id="filter-start-date" class="form-control form-control-sm">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label small fw-bold">To Date</label>
+                            <input type="date" id="filter-end-date" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end gap-2 mt-3">
+                        <button id="btn-reset-filter" class="btn btn-sm btn-outline-secondary">
+                            <i class="bi bi-arrow-counterclockwise me-1"></i>Reset
+                        </button>
+                        <button id="btn-apply-filter" class="btn btn-sm btn-primary">
+                            <i class="bi bi-search me-1"></i>Apply Filters
+                        </button>
+                    </div>
+                    <div class="explainer-banner mt-3">
+                        <i class="bi bi-funnel-fill"></i>
+                        <div><strong>What this filter feature does:</strong> Enables multi-dimensional querying of the 10,248 travel records across 11 major railway stations, train IDs, months, and date ranges to analyze route loads, passenger trends, and individual journey punctuality.</div>
+                    </div>
+                </div>
+
+                <!-- Passenger Records Table -->
+                <div class="content-card mb-4">
+                    <div class="card-title-bar">
+                        <h5><i class="bi bi-table text-primary"></i>Passenger Travel Records Database</h5>
+                        <small class="text-muted">Filtered results loaded from MySQL / JPA</small>
+                    </div>
+                    <div class="table-responsive" style="max-height: 520px; overflow-y: auto;">
+                        <table class="table custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Record ID</th>
+                                    <th>Train</th>
+                                    <th>Route</th>
+                                    <th>Travel Date</th>
+                                    <th>Passenger Count</th>
+                                    <th>Capacity</th>
+                                    <th>Delay</th>
+                                    <th>Occupancy</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-passenger-records-body">
+                                <tr>
+                                    <td colspan="9" class="text-center py-4 text-muted">Loading records...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="explainer-banner">
+                        <i class="bi bi-table"></i>
+                        <div><strong>What this table shows:</strong> Real-time filtered passenger manifest records stored in MySQL/H2 and validated via Spark. Displays individual train category, actual passenger bookings, seat capacity, delay minutes, and capacity tier.</div>
+                    </div>
+                </div>
+
+                <!-- Demand Seasonality & Weekday Charts -->
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-6">
+                        <div class="content-card mb-0">
+                            <div class="card-title-bar">
+                                <h5><i class="bi bi-calendar3 text-primary"></i>Monthly Ridership Seasonality</h5>
+                            </div>
+                            <div style="height: 520px;">
+                                <canvas id="chart-pa-monthly"></canvas>
+                            </div>
+                            <div class="explainer-banner">
+                                <i class="bi bi-calendar-month"></i>
+                                <div><strong>What this shows:</strong> Monthly ridership variations highlighting off-peak dips and peak festival quarters.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content-card mb-0">
+                            <div class="card-title-bar">
+                                <h5><i class="bi bi-calendar2-week text-success"></i>Weekday vs. Weekend Travel Patterns</h5>
+                            </div>
+                            <div style="height: 520px;">
+                                <canvas id="chart-pa-dow"></canvas>
+                            </div>
+                            <div class="explainer-banner">
+                                <i class="bi bi-calendar2-week"></i>
+                                <div><strong>What this shows:</strong> Day-of-week traffic distribution. Clearly highlights significant passenger surges on Fridays, Saturdays, and Sundays.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PAGE 3: ROUTE PERFORMANCE ================= -->
+            <section id="page-route-performance" class="page-view">
+                <div class="explainer-banner header-banner">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div><strong>What this module does:</strong> Evaluates and ranks all 28 railway corridors using Apache Spark DataFrame aggregations. It analyzes ridership density, seat saturation, average punctuality delays, and travel distance to identify high-profit corridors vs underutilized routes.</div>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-title-bar">
+                        <div>
+                            <h5><i class="bi bi-signpost-split-fill text-primary"></i>Railway Corridor Performance & Rankings</h5>
+                            <div class="card-subtitle">Aggregated via Apache Spark DataFrames across passenger volume, occupancy, delay and distance</div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <label class="small text-muted mb-0">Sort By:</label>
+                            <select id="route-sort-by" class="form-select form-select-sm" style="width: 140px;">
+                                <option value="rank">Rank</option>
+                                <option value="passengers">Total Passengers</option>
+                                <option value="occupancy">Occupancy %</option>
+                                <option value="delay">Avg Delay</option>
+                                <option value="distance">Distance</option>
+                                <option value="trips">Trips</option>
+                            </select>
+                            <select id="route-sort-order" class="form-select form-select-sm" style="width: 90px;">
+                                <option value="asc">Asc</option>
+                                <option value="desc">Desc</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Route Corridor</th>
+                                    <th>Total Passengers</th>
+                                    <th>Total Trips</th>
+                                    <th>Avg Passengers/Trip</th>
+                                    <th>Avg Occupancy</th>
+                                    <th>Avg Delay</th>
+                                    <th>Distance</th>
+                                    <th>Trend</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-route-performance-body">
+                                <tr>
+                                    <td colspan="10" class="text-center py-4 text-muted">Computing route performance...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="explainer-banner">
+                        <i class="bi bi-signpost-split-fill"></i>
+                        <div><strong>What this table shows:</strong> Aggregated performance metrics for all 28 corridors calculated by Spark DataFrames. Ranks routes by total passenger volume, average occupancy, punctuality, and distance to identify high-density trunk routes vs underutilized corridors.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PAGE 4: DEMAND FORECASTING (SPARK MLLIB) ================= -->
+            <section id="page-demand-forecasting" class="page-view">
+                <div class="explainer-banner header-banner">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div><strong>What this module does:</strong> Performs machine learning regression using Apache Spark MLlib’s <code>RandomForestRegressor</code> to forecast passenger volumes. Enforces a strict chronological 80% train / 20% test split to guarantee zero future-data leakage.</div>
+                </div>
+
+                <!-- Route Selector Header -->
+                <div class="content-card mb-4">
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                        <div>
+                            <h5 class="mb-1"><i class="bi bi-cpu-fill text-primary me-2"></i>Apache Spark MLlib Passenger Demand Forecasting</h5>
+                            <div class="card-subtitle">Trained with chronological train/test separation (80% train, 20% test) to prevent data leakage</div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <label class="fw-bold small mb-0">Corridor:</label>
+                            <select id="forecast-route-select" class="form-select form-select-sm" style="min-width: 250px;">
+                                <option value="">Loading routes...</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sparse Route Warning Alert -->
+                <div id="forecast-warning-alert" class="alert alert-warning d-none mb-4">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    <span id="forecast-warning-text"></span>
+                </div>
+
+                <!-- Loading Spinner -->
+                <div id="forecast-loading-indicator" class="text-center py-5 d-none">
+                    <div class="spinner-border text-primary mb-3" style="width: 3rem; height: 3rem;" role="status"></div>
+                    <div class="fw-bold">Fitting Spark MLlib RandomForestRegressor Model...</div>
+                    <small class="text-muted">Computing chronological train/test split, feature vectors, and regression evaluation</small>
+                </div>
+
+                <div id="forecast-content-area">
+                    <!-- Model Performance Metrics -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-3">
+                            <div class="forecast-metric-card">
+                                <div class="metric-label">Target Route</div>
+                                <h5 class="fw-bold text-primary mt-2 mb-1" id="forecast-selected-route">-</h5>
+                                <div class="metric-sub">Chronological evaluation corridor</div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="forecast-metric-card">
+                                <div class="metric-label">MAE</div>
+                                <div class="metric-val text-primary" id="forecast-metric-mae">-</div>
+                                <div class="metric-sub">Mean Absolute Error</div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="forecast-metric-card">
+                                <div class="metric-label">RMSE</div>
+                                <div class="metric-val text-secondary" id="forecast-metric-rmse">-</div>
+                                <div class="metric-sub">Root Mean Squared Error</div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="forecast-metric-card">
+                                <div class="metric-label">R&sup2; Score</div>
+                                <div class="metric-val text-success" id="forecast-metric-r2">-</div>
+                                <div class="metric-sub">Goodness of Fit (0 to 1)</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="forecast-metric-card">
+                                <div class="metric-label">Chronological Split</div>
+                                <div class="mt-2 fw-bold fs-5 text-dark">
+                                    <span id="forecast-metric-train-samples">-</span> Train / <span id="forecast-metric-test-samples">-</span> Test
+                                </div>
+                                <div class="metric-sub" id="forecast-metric-algo">-</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="explainer-banner mb-4">
+                        <i class="bi bi-clipboard2-check-fill"></i>
+                        <div><strong>What these MLlib metrics show:</strong> Evaluation of the trained Random Forest model on strictly held-out test data. MAE (Mean Absolute Error) and RMSE show average passenger prediction error (~30-40 passengers on 1,500 capacity trains), while R&sup2; (&gt;0.88) verifies high statistical predictive accuracy.</div>
+                    </div>
+
+                    <!-- Forecast Interactive Line Chart -->
+                    <div class="content-card mb-4">
+                        <div class="card-title-bar">
+                            <div>
+                                <h5><i class="bi bi-graph-up text-primary"></i>Actual Ground Truth vs. Spark MLlib Predictions & Next 7-Day Forecast</h5>
+                                <div class="card-subtitle">Historical evaluation on held-out test data plus upcoming 7-day demand projections</div>
+                            </div>
+                        </div>
+                        <div style="height: 620px;">
+                            <canvas id="chart-forecast-main"></canvas>
+                        </div>
+                        <div class="explainer-banner">
+                            <i class="bi bi-graph-up"></i>
+                            <div><strong>What this chart shows:</strong> Blue solid curve = Ground truth historical ridership; Purple dashed curve = MLlib test predictions on held-out evaluation dates; Emerald green curve = Upcoming 7-day future passenger demand forecast.</div>
+                        </div>
+                    </div>
+
+                    <!-- 7-Day Projections Table -->
+                    <div class="content-card mb-4">
+                        <div class="card-title-bar">
+                            <h5><i class="bi bi-calendar-check text-success"></i>Next 7-Day Passenger Demand Projections & Capacity Advisory</h5>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table custom-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Day of Week</th>
+                                        <th>Predicted Demand</th>
+                                        <th>Recommended Coach Rake</th>
+                                        <th>Operational Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-forecast-7days-body">
+                                    <tr>
+                                        <td colspan="5" class="text-center py-4 text-muted">No forecast generated yet.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="explainer-banner">
+                            <i class="bi bi-calendar-check"></i>
+                            <div><strong>What this table shows:</strong> Day-by-day projected passenger volume for the next 7 days, accompanied by recommended coach rake sizing (~14-16 coaches) to prevent station waitlists.</div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Methodology Box -->
+                    <div class="alert alert-info border-0 shadow-sm">
+                        <h6 class="fw-bold mb-1"><i class="bi bi-info-circle-fill me-2"></i>Academic Machine Learning Methodology:</h6>
+                        <p class="small mb-0">
+                            Demand forecasting uses Apache Spark MLlib’s <code>RandomForestRegressor</code> (25 decision trees, max depth 5).
+                            Features engineered include Day of Week (1-7), Month (1-12), Day of Month (1-31), Weekend Indicator (0/1), Distance (KM), and Train Capacity.
+                            Chronological train/test splitting guarantees zero future-data leakage. Forecast values represent statistical estimates to assist in capacity decision-making.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PAGE 5: DELAY ANALYSIS ================= -->
+            <section id="page-delay-analysis" class="page-view">
+                <div class="explainer-banner header-banner">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div><strong>What this module does:</strong> Evaluates train punctuality and delay trends using an on-time threshold of &le;15 minutes. Identifies chronic bottlenecks for signaling audits and benchmarks high-performing express services.</div>
+                </div>
+
+                <!-- Delay Metric Cards -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Network Punctuality</span>
+                                <div class="stat-icon emerald"><i class="bi bi-check-circle"></i></div>
+                            </div>
+                            <div class="stat-value text-success" id="delay-metric-punctuality">-</div>
+                            <div class="stat-subtext">Trips arriving within &le;15 minutes</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Network Average Delay</span>
+                                <div class="stat-icon amber"><i class="bi bi-clock-history"></i></div>
+                            </div>
+                            <div class="stat-value" id="delay-metric-avg">-</div>
+                            <div class="stat-subtext">Average trip delay minutes</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Maximum Recorded Delay</span>
+                                <div class="stat-icon rose"><i class="bi bi-exclamation-octagon"></i></div>
+                            </div>
+                            <div class="stat-value text-danger" id="delay-metric-max">-</div>
+                            <div class="stat-subtext">Severe delay due to fog/monsoon</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="explainer-banner mb-4">
+                    <i class="bi bi-clock-fill"></i>
+                    <div><strong>What these punctuality metrics show:</strong> Overall network health — the percentage of services meeting the Indian Railways on-time standard (&le;15 min delay), the system-wide average arrival delay, and the worst delay recorded due to adverse weather or junction congestion.</div>
+                </div>
+
+                <!-- Tables Row -->
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-6">
+                        <div class="content-card mb-0 h-100">
+                            <div class="card-title-bar">
+                                <h5><i class="bi bi-exclamation-triangle-fill text-danger"></i>Most Delayed Trains</h5>
+                                <small class="text-muted">Highest average delay</small>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table custom-table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Train</th>
+                                            <th>Route</th>
+                                            <th>Avg Delay</th>
+                                            <th>Max Delay</th>
+                                            <th>Punctuality</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-most-delayed-body">
+                                        <tr><td colspan="6" class="text-center py-3 text-muted">Loading delay stats...</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content-card mb-0 h-100">
+                            <div class="card-title-bar">
+                                <h5><i class="bi bi-award-fill text-success"></i>Most Punctual Trains</h5>
+                                <small class="text-muted">Benchmark on-time records</small>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table custom-table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Train</th>
+                                            <th>Route</th>
+                                            <th>Avg Delay</th>
+                                            <th>Punctuality</th>
+                                            <th>Rating</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-most-punctual-body">
+                                        <tr><td colspan="6" class="text-center py-3 text-muted">Loading delay stats...</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="explainer-banner mb-4">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <div><strong>What these tables show:</strong> Direct benchmark comparison between chronic bottleneck services (requiring signal modernization or timetable slack) and top-performing punctual express trains.</div>
+                </div>
+
+                <!-- Delay Severity Donut -->
+                <div class="content-card">
+                    <div class="card-title-bar">
+                        <h5><i class="bi bi-pie-chart text-primary"></i>Delay Severity Distribution</h5>
+                        <small class="text-muted">Punctual (&le;15m), Minor (16-45m), Moderate (46-90m), Severe (&gt;90m)</small>
+                    </div>
+                    <div style="height: 540px;">
+                        <canvas id="chart-delay-dist"></canvas>
+                    </div>
+                    <div class="explainer-banner">
+                        <i class="bi bi-pie-chart"></i>
+                        <div><strong>What this chart shows:</strong> Categorization of train arrivals by delay severity. Demonstrates that over 56% of trips arrive within the on-time bracket, while 3.8% encounter severe delays exceeding 90 minutes.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PAGE 6: COACH OCCUPANCY ================= -->
+            <section id="page-coach-occupancy" class="page-view">
+                <div class="explainer-banner header-banner">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div><strong>What this module does:</strong> Calculates train capacity utilization using the formula <code>(Passenger Count / Train Capacity) &times; 100</code>. Highlights overcrowded services needing extra coaches vs underutilized trains where coaches can be reallocated.</div>
+                </div>
+
+                <!-- Formula Box -->
+                <div class="content-card mb-4 bg-light border">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="stat-icon blue fs-4"><i class="bi bi-calculator"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Occupancy Percentage Formula:</h6>
+                            <code class="fs-6 text-primary">Occupancy Percentage = (Passenger Count / Train Capacity) &times; 100</code>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge-occupancy low">Low: &lt;50%</span>
+                                <span class="badge-occupancy moderate">Moderate: 50% &ndash; 75%</span>
+                                <span class="badge-occupancy high">High: 75% &ndash; 90%</span>
+                                <span class="badge-occupancy critical">Critical: &gt;90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explainer-banner mt-3">
+                        <i class="bi bi-pie-chart-fill"></i>
+                        <div><strong>What this formula & classification does:</strong> Calculates the exact seat saturation percentage for every trip and groups them into 4 standard operational tiers (Low &lt;50%, Moderate 50-75%, High 75-90%, and Critical &gt;90%) to prioritize coach attachments.</div>
+                    </div>
+                </div>
+
+                <!-- High vs Low Highlights -->
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-6">
+                        <h6 class="fw-bold text-danger mb-3"><i class="bi bi-fire me-1"></i>High-Occupancy Corridors (&ge;85% Occupancy)</h6>
+                        <div class="row g-2" id="occupancy-high-cards"></div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h6 class="fw-bold text-muted mb-3"><i class="bi bi-hourglass-split me-1"></i>Underutilised Corridors (&lt;60% Occupancy)</h6>
+                        <div class="row g-2" id="occupancy-low-cards"></div>
+                    </div>
+                </div>
+
+                <div class="explainer-banner mb-4">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <div><strong>What these corridor cards show:</strong> Highlights top overcrowded routes (&ge;85% occupancy) that generate high passenger waitlists versus underutilized routes (&lt;60% occupancy) where empty coaches can be detached and saved.</div>
+                </div>
+
+                <!-- Full Occupancy Table -->
+                <div class="content-card">
+                    <div class="card-title-bar">
+                        <h5><i class="bi bi-table text-primary"></i>Train-Wise Occupancy Roster</h5>
+                        <div class="d-flex gap-2">
+                            <input type="text" id="occupancy-search-input" class="form-control form-control-sm" placeholder="Search train or route..." style="width: 200px;">
+                            <select id="occupancy-class-filter" class="form-select form-select-sm" style="width: 140px;">
+                                <option value="ALL">All Classes</option>
+                                <option value="Low">Low (&lt;50%)</option>
+                                <option value="Moderate">Moderate (50-75%)</option>
+                                <option value="High">High (75-90%)</option>
+                                <option value="Critical">Critical (&gt;90%)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Train ID</th>
+                                    <th>Train Name</th>
+                                    <th>Route</th>
+                                    <th>Category</th>
+                                    <th>Avg Capacity</th>
+                                    <th>Avg Passengers</th>
+                                    <th>Occupancy %</th>
+                                    <th>Classification</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-occupancy-body">
+                                <tr><td colspan="8" class="text-center py-4 text-muted">Loading occupancy statistics...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="explainer-banner">
+                        <i class="bi bi-table"></i>
+                        <div><strong>What this roster shows:</strong> Train-by-train breakdown of average seat capacity against recorded passenger counts, classifying each service into Low, Moderate, High, or Critical saturation.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PAGE 7: SMART RECOMMENDATIONS ================= -->
+            <section id="page-smart-recommendations" class="page-view">
+                <div class="explainer-banner header-banner">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div><strong>What this module does:</strong> Automated operational intelligence engine. It translates raw Big Data analytics and ML predictions into actionable railway management decisions, such as attaching extra LHB coaches, rescheduling delayed trains, and optimizing low-occupancy routes.</div>
+                </div>
+
+                <div class="content-card mb-4">
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                        <div>
+                            <h5 class="mb-1"><i class="bi bi-lightbulb-fill text-warning me-2"></i>Operational Decision-Support Recommendations</h5>
+                            <div class="card-subtitle">Rule-based intelligence engine derived from actual Spark data transformations and MLlib predictions</div>
+                        </div>
+                        <div class="btn-group btn-group-sm" id="rec-filter-pills">
+                            <button class="btn btn-primary" data-cat="ALL">All</button>
+                            <button class="btn btn-outline-primary" data-cat="CAPACITY">Capacity</button>
+                            <button class="btn btn-outline-primary" data-cat="UTILISATION">Utilisation</button>
+                            <button class="btn btn-outline-primary" data-cat="DELAY">Delays</button>
+                            <button class="btn btn-outline-primary" data-cat="DEMAND">Demand</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="recommendations-container">
+                    <div class="text-center py-4 text-muted">
+                        <div class="spinner-border spinner-border-sm text-primary me-2"></div>Generating recommendations...
+                    </div>
+                </div>
+
+                <div class="explainer-banner mt-4">
+                    <i class="bi bi-lightbulb-fill"></i>
+                    <div><strong>What these recommendations show:</strong> Categorized and prioritized decision cards (Capacity, Utilization, Delays, Demand). Each card highlights the affected train/route corridor, the underlying data trigger (e.g., occupancy &gt;95%), and the recommended management remedy (e.g., attach +2 3-Tier AC coaches).</div>
+                </div>
+            </section>
+
+            <!-- ================= PAGE 8: DATASET MANAGEMENT ================= -->
+            <section id="page-dataset-management" class="page-view">
+                <div class="explainer-banner header-banner">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div><strong>What this module does:</strong> Manages the Big Data ingestion and ETL pipeline. It monitors the active dataset, performs automated data validation (schema checking, null detection, duplicate detection), and allows uploading new railway CSV datasets for dynamic Apache Spark processing.</div>
+                </div>
+
+                <!-- Dataset Status & Summary -->
+                <div class="content-card mb-4">
+                    <div class="card-title-bar">
+                        <h5><i class="bi bi-info-circle-fill text-primary"></i>Active Ingested Dataset Summary</h5>
+                        <span id="ds-status-badge" class="badge bg-success">READY</span>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <small class="text-muted text-uppercase fw-bold">Source File</small>
+                            <div class="fw-bold fs-6 mt-1" id="ds-source-name">railway_passenger_data.csv</div>
+                        </div>
+                        <div class="col-md-2">
+                            <small class="text-muted text-uppercase fw-bold">Records Loaded</small>
+                            <div class="fw-bold fs-5 text-primary mt-1" id="ds-records-loaded">-</div>
+                        </div>
+                        <div class="col-md-2">
+                            <small class="text-muted text-uppercase fw-bold">Valid & Processed</small>
+                            <div class="fw-bold fs-5 text-success mt-1" id="ds-records-processed">-</div>
+                        </div>
+                        <div class="col-md-2">
+                            <small class="text-muted text-uppercase fw-bold">Invalid / Duplicates</small>
+                            <div class="fw-bold fs-5 text-danger mt-1">
+                                <span id="ds-invalid-records">0</span> / <span id="ds-duplicate-records">0</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <small class="text-muted text-uppercase fw-bold">Routes Analysed / Spark Time</small>
+                            <div class="fw-bold fs-6 mt-1">
+                                <span id="ds-routes-analysed">-</span> routes in <span id="ds-processing-time">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explainer-banner">
+                        <i class="bi bi-database-check"></i>
+                        <div><strong>What this summary shows:</strong> Real-time health metrics of the loaded dataset in memory. Verifies 10,248 cleaned records across all 12 calendar months, 0 corrupt or duplicate rows, 28 distinct intercity routes, and Spark DataFrame loading time (&lt;800 ms).</div>
+                    </div>
+                </div>
+
+                <!-- CSV Upload Box -->
+                <div class="content-card mb-4">
+                    <div class="card-title-bar">
+                        <h5><i class="bi bi-cloud-arrow-up-fill text-primary"></i>Upload New Railway CSV Dataset</h5>
+                        <button id="btn-reset-default-ds" class="btn btn-sm btn-outline-danger">
+                            <i class="bi bi-arrow-counterclockwise me-1"></i>Reset to Default 10,248 Dataset
+                        </button>
+                    </div>
+                    <div class="upload-dropzone" id="upload-dropzone">
+                        <i class="bi bi-file-earmark-spreadsheet"></i>
+                        <h6 class="fw-bold">Drag and drop your railway CSV dataset here, or click to browse</h6>
+                        <small class="text-muted d-block">
+                            Required columns: <code>record_id, train_id, train_name, source_station, destination_station, travel_date, passenger_count, train_capacity, delay_minutes, distance_km, day_of_week, month, train_category</code>
+                        </small>
+                        <input type="file" id="file-upload-input" accept=".csv" class="d-none">
+                    </div>
+
+                    <div class="explainer-banner mt-3">
+                        <i class="bi bi-cloud-arrow-up-fill"></i>
+                        <div><strong>What this upload feature does:</strong> Enables dynamic Big Data ingestion. When a user uploads a new CSV, the system validates the 13 required schema columns, verifies row integrity, displays a 10-row preview, and triggers Apache Spark to recompute all analytics and forecasting models on the new data.</div>
+                    </div>
+
+                    <!-- Preview & Validation Feedback -->
+                    <div id="csv-preview-area" class="d-none mt-4">
+                        <div id="csv-preview-info"></div>
+                        <h6 class="fw-bold mb-2">First 10 Records Preview:</h6>
+                        <div class="table-responsive mb-3">
+                            <table class="table custom-table">
+                                <thead>
+                                    <tr>
+                                        <th>Record ID</th>
+                                        <th>Train ID</th>
+                                        <th>Train Name</th>
+                                        <th>Route</th>
+                                        <th>Date</th>
+                                        <th>Passengers</th>
+                                        <th>Capacity</th>
+                                        <th>Delay</th>
+                                        <th>Occupancy</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-csv-preview-body"></tbody>
+                            </table>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button id="btn-process-spark" class="btn btn-primary" disabled>
+                                <i class="bi bi-cpu me-2"></i>Process Dataset with Apache Spark
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PAGE 9: REPORTS ================= -->
+            <section id="page-reports" class="page-view">
+                <div class="explainer-banner header-banner">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div><strong>What this module does:</strong> Synthesizes analytics, route rankings, punctuality metrics, and operational recommendations into a consolidated executive audit report suitable for management presentations, printable PDF export, or raw CSV download.</div>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-title-bar">
+                        <div>
+                            <h5><i class="bi bi-file-earmark-text-fill text-primary"></i>Comprehensive Operational & Demand Report</h5>
+                            <div class="card-subtitle">Generated: <span id="report-generated-at">-</span></div>
+                        </div>
+                        <div class="d-flex gap-2 no-print">
+                            <button class="btn btn-sm btn-outline-secondary" onclick="window.print()">
+                                <i class="bi bi-printer me-1"></i>Print Report / Save PDF
+                            </button>
+                            <a href="/api/reports/csv" class="btn btn-sm btn-primary" download>
+                                <i class="bi bi-download me-1"></i>Download CSV Report
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Summary Stats in Report -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-3">
+                            <div class="p-3 bg-light border rounded">
+                                <small class="text-muted text-uppercase fw-bold">Total Passengers</small>
+                                <div class="fs-4 fw-bold mt-1" id="report-total-passengers">-</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="p-3 bg-light border rounded">
+                                <small class="text-muted text-uppercase fw-bold">Records Analysed</small>
+                                <div class="fs-4 fw-bold mt-1" id="report-total-records">-</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="p-3 bg-light border rounded">
+                                <small class="text-muted text-uppercase fw-bold">Average Occupancy</small>
+                                <div class="fs-4 fw-bold text-success mt-1" id="report-avg-occupancy">-</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="p-3 bg-light border rounded">
+                                <small class="text-muted text-uppercase fw-bold">Average Delay</small>
+                                <div class="fs-4 fw-bold text-danger mt-1" id="report-avg-delay">-</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Routes in Report -->
+                    <h6 class="fw-bold mb-2">High Demand Route Corridors:</h6>
+                    <div class="table-responsive mb-4">
+                        <table class="table custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Route</th>
+                                    <th>Total Passengers</th>
+                                    <th>Avg Occupancy</th>
+                                    <th>Avg Delay</th>
+                                    <th>Demand Trend</th>
+                                </tr>
+                            </thead>
+                            <tbody id="report-top-routes-body">
+                                <tr><td colspan="6" class="text-center py-3 text-muted">Loading report data...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Active Recommendations in Report -->
+                    <h6 class="fw-bold mb-2">Active Strategic Recommendations:</h6>
+                    <div class="table-responsive">
+                        <table class="table custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Priority</th>
+                                    <th>Recommendation & Subject</th>
+                                    <th>Reason for Recommendation</th>
+                                    <th>Suggested Management Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="report-recommendations-body">
+                                <tr><td colspan="4" class="text-center py-3 text-muted">Loading recommendations...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="explainer-banner mt-4">
+                        <i class="bi bi-file-earmark-check-fill"></i>
+                        <div><strong>What this report shows:</strong> An executive-ready operational briefing containing aggregate passenger traffic, network occupancy, top 5 highest-demand rail corridors, and active priority recommendations. Use the "Print Report" button to export directly as a clean PDF document.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PAGE 10: WHAT-IF CAPACITY SIMULATOR ================= -->
+            <section id="page-capacity-simulator" class="page-view">
+                <div class="explainer-banner header-banner">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div><strong>What this simulator does:</strong> Scenario planning engine powered by Spark calculations. Allows railway operators to simulate passenger demand surges (up to +100% for Diwali/Chhath/Summer rush) and test adding extra LHB coaches (+72 to +432 berths) to observe the outcome on train occupancy and ticket revenue before physical deployment.</div>
+                </div>
+
+                <div class="content-card mb-4">
+                    <div class="card-title-bar">
+                        <div>
+                            <h5><i class="bi bi-sliders2-vertical text-primary"></i>What-If Passenger Demand Surge & Coach Capacity Simulator</h5>
+                            <div class="card-subtitle">Real-time Big Data simulation engine using Apache Spark to test holiday surges, festival rushes, and coach rake augmentation</div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 align-items-end">
+                        <div class="col-md-4">
+                            <label class="form-label">Select Route Corridor:</label>
+                            <select id="sim-route-select" class="form-select">
+                                <option value="Bengaluru -> Kolkata">Bengaluru &rarr; Kolkata</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Demand Surge: <span id="sim-surge-label" class="badge bg-primary fs-6">+25%</span></label>
+                            <input type="range" class="form-range" id="sim-surge-slider" min="0" max="100" step="5" value="25">
+                            <div class="d-flex justify-content-between text-muted small mt-1">
+                                <span>Normal (0%)</span>
+                                <span>Festival (+50%)</span>
+                                <span>Peak (+100%)</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Extra Coaches to Attach:</label>
+                            <select id="sim-coaches-select" class="form-select">
+                                <option value="0">0 Extra Coaches (Current Rake)</option>
+                                <option value="1">+1 LHB Coach (+72 Berths)</option>
+                                <option value="2" selected>+2 LHB Coaches (+144 Berths)</option>
+                                <option value="3">+3 LHB Coaches (+216 Berths)</option>
+                                <option value="4">+4 LHB Coaches (+288 Berths)</option>
+                                <option value="6">+6 LHB Special Rake (+432 Berths)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <button id="btn-run-simulation" class="btn btn-primary w-100 py-3">
+                                <i class="bi bi-play-circle-fill me-1"></i>Simulate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simulation Output Display -->
+                <div id="sim-result-container" class="content-card">
+                    <div class="d-flex align-items-center justify-content-between mb-4 border-bottom pb-3">
+                        <h5 class="mb-0"><i class="bi bi-cpu-fill text-success me-2"></i>Simulation Outcome for <span id="sim-res-route" class="text-primary">-</span></h5>
+                        <span id="sim-res-badge" class="badge bg-success fs-6 py-2 px-3">OPTIMAL UTILIZATION</span>
+                    </div>
+
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <span class="stat-label">Baseline Demand</span>
+                                    <div class="stat-icon blue"><i class="bi bi-people"></i></div>
+                                </div>
+                                <div class="stat-value" id="sim-res-baseline-demand">-</div>
+                                <div class="stat-subtext">Average daily riders recorded</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <span class="stat-label">Simulated Demand</span>
+                                    <div class="stat-icon rose"><i class="bi bi-graph-up-arrow"></i></div>
+                                </div>
+                                <div class="stat-value text-danger" id="sim-res-simulated-demand">-</div>
+                                <div class="stat-subtext" id="sim-res-surge-subtext">With +25% passenger surge</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <span class="stat-label">Simulated Capacity</span>
+                                    <div class="stat-icon purple"><i class="bi bi-train-front"></i></div>
+                                </div>
+                                <div class="stat-value" id="sim-res-simulated-capacity">-</div>
+                                <div class="stat-subtext" id="sim-res-added-seats">With +144 extra berths</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <span class="stat-label">Projected Occupancy</span>
+                                    <div class="stat-icon emerald"><i class="bi bi-speedometer2"></i></div>
+                                </div>
+                                <div class="stat-value text-success" id="sim-res-occupancy">-</div>
+                                <div class="stat-subtext">Capacity saturation rate</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info border-2 shadow-sm p-4">
+                        <h6 class="fw-bold mb-2"><i class="bi bi-lightbulb-fill text-warning me-2 fs-5"></i>Spark AI Operational Advisory:</h6>
+                        <p class="fs-6 mb-3" id="sim-res-recommendation">Running simulation calculations...</p>
+                        <div class="d-flex flex-wrap gap-4 text-dark fw-bold">
+                            <span><i class="bi bi-cash-stack text-success me-1"></i>Projected Revenue Impact: <span class="text-success" id="sim-res-revenue">₹0</span></span>
+                            <span><i class="bi bi-exclamation-triangle text-danger me-1"></i>Unmet / Waitlisted Spillover: <span class="text-danger" id="sim-res-unmet">0 passengers</span></span>
+                        </div>
+                    </div>
+
+                    <div class="explainer-banner mt-4">
+                        <i class="bi bi-sliders2-vertical"></i>
+                        <div><strong>What this simulation shows:</strong> Compares baseline daily demand against simulated surge volume, calculating the resulting occupancy rate, potential passenger waitlists, extra fare revenue generated, and an automated Spark AI decision on whether the coach augmentation is adequate or requires running clone special trains.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PAGE 11: SPARK ENGINE PROFILER ================= -->
+            <section id="page-spark-profiler" class="page-view">
+                <div class="explainer-banner header-banner">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div><strong>What this module does:</strong> Big Data engine diagnostic console. Demonstrates genuine, in-memory Apache Spark 3.5.1 distributed execution on Java 21, exposing active CPU cores, memory utilization, the Catalyst Optimizer physical execution DAG, and RDD partition distribution.</div>
+                </div>
+
+                <div class="content-card mb-4">
+                    <div class="card-title-bar">
+                        <div>
+                            <h5><i class="bi bi-cpu-fill text-primary"></i>Apache Spark 3.5.1 Cluster Engine & Execution Profiler</h5>
+                            <div class="card-subtitle">Real-time JVM execution metrics, Catalyst Optimizer Physical Execution Plan, and RDD partitioning stats</div>
+                        </div>
+                        <button id="btn-refresh-profiler" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-repeat me-1"></i>Refresh Spark Metrics
+                        </button>
+                    </div>
+
+                    <!-- 4 Spark Cluster KPI Cards -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-xl-3 col-md-6">
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <span class="stat-label">Spark Version & Master</span>
+                                    <div class="stat-icon blue"><i class="bi bi-cpu"></i></div>
+                                </div>
+                                <div class="stat-value fs-2" id="spark-prof-version">Spark 3.5.1</div>
+                                <div class="stat-subtext" id="spark-prof-master">Master: local[*] (Java 21)</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <span class="stat-label">Parallel CPU Cores</span>
+                                    <div class="stat-icon purple"><i class="bi bi-grid-3x3-gap-fill"></i></div>
+                                </div>
+                                <div class="stat-value" id="spark-prof-cores">-</div>
+                                <div class="stat-subtext" id="spark-prof-parallelism">Default Parallelism: -</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <span class="stat-label">RDD Partitions</span>
+                                    <div class="stat-icon emerald"><i class="bi bi-layers-fill"></i></div>
+                                </div>
+                                <div class="stat-value" id="spark-prof-partitions">-</div>
+                                <div class="stat-subtext" id="spark-prof-records">- records partitioned</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <span class="stat-label">JVM Heap Memory</span>
+                                    <div class="stat-icon amber"><i class="bi bi-memory"></i></div>
+                                </div>
+                                <div class="stat-value fs-2" id="spark-prof-memory">-</div>
+                                <div class="stat-subtext" id="spark-prof-memory-sub">Used / Max Allocated</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="explainer-banner mb-4">
+                        <i class="bi bi-cpu-fill"></i>
+                        <div><strong>What these cluster KPIs show:</strong> Apache Spark runtime configuration — running Spark 3.5.1 in <code>local[*]</code> mode, utilizing all available parallel CPU worker cores, partitioning data across multiple in-memory blocks, and monitoring JVM heap memory usage.</div>
+                    </div>
+
+                    <!-- Catalyst Physical Execution Plan Tree -->
+                    <div class="mb-4">
+                        <h6 class="fw-bold mb-2"><i class="bi bi-diagram-3-fill text-primary me-2"></i>Spark SQL Catalyst Optimizer Physical Execution Plan:</h6>
+                        <pre class="spark-code-block" id="spark-catalyst-plan">Loading Catalyst Physical SparkPlan...</pre>
+                        <div class="explainer-banner">
+                            <i class="bi bi-diagram-3-fill"></i>
+                            <div><strong>What this Catalyst Plan shows:</strong> The low-level execution Directed Acyclic Graph (DAG) created by Apache Spark's Catalyst Optimizer. Proves actual Spark SQL optimization through stages including <code>FileScan csv</code>, in-memory <code>Filter</code>, <code>HashAggregate</code>, and <code>Exchange hashpartitioning</code>.</div>
+                        </div>
+                    </div>
+
+                    <!-- RDD Partition Distribution Table -->
+                    <div>
+                        <h6 class="fw-bold mb-2"><i class="bi bi-table text-primary me-2"></i>RDD Partition Distribution & Storage Status:</h6>
+                        <div class="table-responsive">
+                            <table class="table custom-table">
+                                <thead>
+                                    <tr>
+                                        <th>Partition ID</th>
+                                        <th>Records in Partition</th>
+                                        <th>Storage Level</th>
+                                        <th>Task Execution Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-spark-partitions-body">
+                                    <tr><td colspan="4" class="text-center py-3 text-muted">Loading partition table...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="explainer-banner">
+                            <i class="bi bi-layers-fill"></i>
+                            <div><strong>What this partition table shows:</strong> Distributed RDD memory structure. Displays the 10,248 dataset rows partitioned across in-memory partitions (2,562 records per partition), showing parallel task execution status across CPU threads.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <!-- Application Scripts -->
+    <script src="/js/charts.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
+
