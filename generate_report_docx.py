@@ -44,7 +44,7 @@ def generate_report():
 
     p_title = doc.add_paragraph()
     p_title.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r_title = p_title.add_run("Large-Scale Railways Data Processing and Demand Forecasting using Java and Apache Spark")
+    r_title = p_title.add_run("Large-Scale Railways Data Processing and Demand Forecasting using Scala and Apache Spark")
     r_title.font.name = "Calibri"
     r_title.font.size = Pt(24)
     r_title.font.bold = True
@@ -65,7 +65,7 @@ def generate_report():
     meta_table.alignment = WD_TABLE_ALIGNMENT.CENTER
     meta_data = [
         ("Course / Subject:", "Big Data Technologies (BDT)"),
-        ("Primary Programming Language:", "100% Java (JDK 21 LTS) - No Google Colab, No Python backend"),
+        ("Primary Programming Language:", "Apache Spark (Scala 2.12) & Java 21 - Pure JVM Pipeline"),
         ("Distributed Framework:", "Apache Spark 3.5.1 (Core, SQL DataFrames, MLlib)"),
         ("Application Backend:", "Spring Boot 3.2.5 LTS & Java Persistence API (JPA)"),
         ("Storage Layer:", "MySQL 8.x Server with Resilient Embedded H2 Fallback"),

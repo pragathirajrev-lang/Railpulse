@@ -1,6 +1,6 @@
-# Large-Scale Railways Data Processing and Demand Forecasting using Java and Apache Spark
+# Large-Scale Railways Data Processing and Demand Forecasting using Scala and Spark
 
-An enterprise-grade Big Data Technologies (BDT) mini-project built entirely with **Java 21**, **Apache Spark 3.5.1**, **Spring Boot 3.2.5**, and **MySQL**.
+An enterprise-grade Big Data Technologies (BDT) mini-project built with **Apache Spark 3.5.1 (Scala 2.12)**, **Java 21**, **Spring Boot 3.2.5**, and **MySQL**.
 
 ---
 
@@ -8,9 +8,16 @@ An enterprise-grade Big Data Technologies (BDT) mini-project built entirely with
 
 This platform analyzes large-scale railway passenger movement patterns, route performance, network delay bottlenecks, and coach capacity utilization across major Indian railway corridors. It implements genuine distributed data processing using **Apache Spark DataFrames** and machine learning demand forecasting using **Apache Spark MLlib**.
 
+### Dual Implementation (Scala Core + Full-Stack Web Interface):
+- **Native Scala Spark Core Pipelines (`src/main/scala/com/railway/`):**
+  - `RailwayDataProcessing.scala`: Pure Scala Spark DataFrame distributed aggregations, route profitability matrix, and network delay classification.
+  - `RailwayDemandForecaster.scala`: Pure Scala Spark MLlib `VectorAssembler` and `RandomForestRegressor` chronological forecasting pipeline.
+- **Full-Stack Web Interface (`src/main/java/com/railway/` & `src/main/resources/`):**
+  - Java 21 & Spring Boot REST controllers, responsive Bootstrap 5 UI, and interactive Chart.js dashboards.
+
 ### Academic Requirements Checklist
 - [x] **No Google Colab**: 100% locally runnable on Windows.
-- [x] **Java as Primary Language**: All backend processing, Spark jobs, and ML workflows are written in Java 21 (no Python / PySpark).
+- [x] **Scala & Spark Native Core**: Features native Scala 2.12 source files in `src/main/scala/` utilizing Apache Spark Core, SQL DataFrames, and MLlib (`spark-core_2.12`, `spark-sql_2.12`, `spark-mllib_2.12`).
 - [x] **Genuine Apache Spark Engine**: Utilizes embedded local SparkSession (`local[*]`), DataFrames, Spark SQL aggregations, and Spark MLlib pipelines.
 - [x] **Realistic Big Data Volume**: Contains **10,248 structured passenger trip records** covering all 12 calendar months (Jan–Dec) across 28 major Indian railway routes.
 - [x] **Spark MLlib Regression**: Employs `RandomForestRegressor` with chronological 80/20 train/test split to eliminate future-data leakage, reporting MAE, RMSE, and R² metrics alongside a 7-day future demand forecast.
