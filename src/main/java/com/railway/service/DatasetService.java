@@ -103,8 +103,8 @@ public class DatasetService {
             // Invalidate forecast cache to prevent stale model predictions
             forecastingService.clearCache();
 
-            // Run genuine Spark ingestion & processing
-            return sparkProcessingService.processCsvFile(targetFile.getAbsolutePath());
+            // Run genuine Spark append ingestion & processing (merges with baseline)
+            return sparkProcessingService.appendCsvFile(targetFile.getAbsolutePath());
 
         } catch (Exception e) {
             log.error("Failed to save or process uploaded file: ", e);

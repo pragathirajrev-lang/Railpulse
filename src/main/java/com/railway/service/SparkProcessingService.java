@@ -94,21 +94,7 @@ public class SparkProcessingService {
                     .dropDuplicates("record_id");
 
             // Add computed columns: route, occupancy_percentage, occupancy_status
-            Dataset<Row> transformedDf = cleanedDf
-                    .withColumn("route", concat_ws(" -> ", col("source_station"), col("destination_station")))
-                    .withColumn("occupancy_percentage",
-                            round(col("passenger_count").cast(DataTypes.DoubleType)
-                                    .divide(col("train_capacity").cast(DataTypes.DoubleType))
-                                    .multiply(100.0), 2))
-                    .withColumn("occupancy_status",
-                            when(col("occupancy_percentage").lt(50.0), "Low")
-                                    .when(col("occupancy_percentage").leq(75.0), "Moderate")
-                                    .when(col("occupancy_percentage").leq(90.0), "High")
-                                    .otherwise("Critical")
-                    )
-                    .withColumn("is_weekend",
-                            when(col("day_of_week").isin("Saturday", "Sunday", "Friday"), 1).otherwise(0)
-                    );
+            Dataset<Row> transformedDf = transformDataFrame(cleanedDf);
 
             // Persist the transformed DataFrame in memory for high-performance interactive queries
             if (this.processedDataset != null) {
@@ -119,10 +105,10 @@ public class SparkProcessingService {
             long processedCount = this.processedDataset.count();
             summary.setRecordsProcessed(processedCount);
 
-            // Calculate aggregations via Spark
+            // Calculate aggregations via Spark in-memory
             computeSparkAnalytics();
 
-            // Populate and synchronize Database
+            // Populate and synchronize Database safely
             syncDatabaseFromSpark(transformedDf);
 
             long endTime = System.currentTimeMillis();
@@ -142,6 +128,102 @@ public class SparkProcessingService {
         }
 
         return summary;
+    }
+
+    public synchronized ProcessingSummary appendCsvFile(String filePath) {
+        long startTime = System.currentTimeMillis();
+        log.info("Executing Spark CSV append ingestion from path: {}", filePath);
+
+        ProcessingSummary summary = new ProcessingSummary();
+        summary.setSourceDataset("railway_passenger_data.csv + " + new File(filePath).getName());
+
+        try {
+            int newRowsCount = 0;
+            try (FileInputStream fis = new FileInputStream(filePath)) {
+                DataValidationUtil.ValidationReport validation = DataValidationUtil.validateAndParse(fis);
+                newRowsCount = validation.getTotalRows();
+                summary.setRecordsLoaded(newRowsCount);
+                summary.setInvalidRecords(validation.getMissingValueRows() + validation.getInvalidDataTypeRows());
+                summary.setDuplicateRecords(validation.getDuplicateRows());
+            }
+
+            // Apache Spark Big Data Ingestion for new records
+            Dataset<Row> rawNewDf = spark.read()
+                    .option("header", "true")
+                    .option("inferSchema", "true")
+                    .csv(filePath);
+
+            Dataset<Row> cleanedNewDf = rawNewDf
+                    .filter(col("record_id").isNotNull())
+                    .filter(col("passenger_count").isNotNull().and(col("passenger_count").geq(0)))
+                    .filter(col("train_capacity").isNotNull().and(col("train_capacity").gt(0)))
+                    .dropDuplicates("record_id");
+
+            Dataset<Row> transformedNewDf = transformDataFrame(cleanedNewDf);
+
+            // Ensure baseline exists
+            if (this.processedDataset == null) {
+                File defaultFile = new File("railway_passenger_data.csv");
+                if (!defaultFile.exists()) {
+                    defaultFile = new File("src/main/resources/data/railway_passenger_data.csv");
+                }
+                processCsvFile(defaultFile.getAbsolutePath());
+            }
+
+            // Union with existing dataset and deduplicate by record_id
+            Dataset<Row> combinedDf = this.processedDataset
+                    .unionByName(transformedNewDf)
+                    .dropDuplicates("record_id");
+
+            if (this.processedDataset != null) {
+                this.processedDataset.unpersist();
+            }
+            this.processedDataset = combinedDf.persist();
+
+            long totalCount = this.processedDataset.count();
+            summary.setRecordsProcessed(totalCount);
+
+            // Recompute Spark aggregations across combined dataset in-memory
+            computeSparkAnalytics();
+
+            // Background DB sync
+            new Thread(() -> syncDatabaseFromSpark(this.processedDataset)).start();
+
+            long endTime = System.currentTimeMillis();
+            summary.setProcessingTimeMs(endTime - startTime);
+            summary.setRoutesAnalysed(cachedRouteStats.size());
+            summary.setStatus("SUCCESS");
+            summary.setMessage("Successfully appended " + newRowsCount + " new records into Apache Spark. Total active dataset is now " + totalCount + " records across " + cachedRouteStats.size() + " railway corridors.");
+
+            this.latestSummary = summary;
+            log.info("Spark dataset append completed successfully: {}", summary.getMessage());
+
+        } catch (Exception e) {
+            log.error("Fatal error during Spark append: ", e);
+            summary.setStatus("FAILED");
+            summary.setMessage("Spark append failed: " + e.getMessage());
+            this.latestSummary = summary;
+        }
+
+        return summary;
+    }
+
+    private Dataset<Row> transformDataFrame(Dataset<Row> cleanedDf) {
+        return cleanedDf
+                .withColumn("route", concat_ws(" -> ", col("source_station"), col("destination_station")))
+                .withColumn("occupancy_percentage",
+                        round(col("passenger_count").cast(DataTypes.DoubleType)
+                                .divide(col("train_capacity").cast(DataTypes.DoubleType))
+                                .multiply(100.0), 2))
+                .withColumn("occupancy_status",
+                        when(col("occupancy_percentage").lt(50.0), "Low")
+                                .when(col("occupancy_percentage").leq(75.0), "Moderate")
+                                .when(col("occupancy_percentage").leq(90.0), "High")
+                                .otherwise("Critical")
+                )
+                .withColumn("is_weekend",
+                        when(col("day_of_week").isin("Saturday", "Sunday", "Friday"), 1).otherwise(0)
+                );
     }
 
     private void computeSparkAnalytics() {

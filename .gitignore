@@ -29,4 +29,5 @@ Desktop.ini
 # Temporary scratch scripts
 *.tmp
 *.bak
+uploads/
 

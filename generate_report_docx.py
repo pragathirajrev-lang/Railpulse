@@ -244,7 +244,7 @@ def generate_report():
     doc.add_heading("5. Comprehensive Platform Modules & Features", level=1)
     
     modules = [
-        ("Module 1: Executive KPI Dashboard", "Displays high-level operational metrics: total passengers (9.58 Million), gross revenue (Rs. 92.4 Crore), on-time percentage (74.2%), average delay (18.4 mins), and active train corridors (28 routes)."),
+        ("Module 1: Executive KPI Dashboard", "Displays high-level operational metrics: total passengers (11.64 Million (11,640,642 passengers)), gross revenue (Rs. 92.4 Crore), on-time percentage (74.2%), average delay (18.4 mins), and active train corridors (28 routes)."),
         ("Module 2: Passenger Volume & Seasonality Analytics", "Visualizes monthly ridership across all 12 calendar months. Clearly highlights Q2 summer vacation peaks (May: 868k passengers) and Q4 festival surges (Oct: 1.08M, Nov: 1.05M passengers)."),
         ("Module 3: Route Performance & Revenue Matrix", "Compares all 28 corridors on passenger density, gross earnings, and average delay. Identifies high-yield routes such as New Delhi - Mumbai Central and Bengaluru - Chennai Central."),
         ("Module 4: Spark MLlib Demand Forecasting", "Interactive predictor displaying historical test actuals vs predicted curve, future 7-day volume projections, and dynamic train selection dropdowns."),

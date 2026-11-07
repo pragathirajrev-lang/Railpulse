@@ -760,10 +760,22 @@ const App = {
             alert('Apache Spark Processing Completed!\n' + summary.message);
             this.updateDatasetSummaryUI(summary);
             this.loadDashboard();
+            this.loadPassengerAnalytics();
+            this.loadRoutePerformance();
+
+            // Hide preview area after successful processing
+            const previewArea = document.getElementById('csv-preview-area');
+            if (previewArea) previewArea.classList.add('d-none');
+
+            // Update top bar dataset status
+            const topbarStatus = document.getElementById('topbar-dataset-status');
+            if (topbarStatus && summary.recordsProcessed) {
+                topbarStatus.textContent = 'Spark Dataset: ' + Number(summary.recordsProcessed).toLocaleString() + ' records';
+            }
 
         } catch (error) {
             console.error('Processing failed:', error);
-            alert('Dataset processing error.');
+            alert('Dataset processing error: ' + error.message);
             if (processBtn) {
                 processBtn.disabled = false;
                 processBtn.innerHTML = '<i class="bi bi-cpu me-2"></i>Process Dataset with Apache Spark';
@@ -772,15 +784,28 @@ const App = {
     },
 
     async resetDefaultDataset() {
-        if (!confirm('Reset current dataset to default 7,500 simulated records?')) return;
+        if (!confirm('Reset current dataset to default 10,248 benchmark records?')) return;
         try {
             const res = await fetch('/api/dataset/reset', { method: 'POST' });
             const summary = await res.json();
             alert('Reset Completed!\n' + summary.message);
             this.updateDatasetSummaryUI(summary);
             this.loadDashboard();
+            this.loadPassengerAnalytics();
+            this.loadRoutePerformance();
+
+            // Hide preview area if open
+            const previewArea = document.getElementById('csv-preview-area');
+            if (previewArea) previewArea.classList.add('d-none');
+
+            // Update top bar dataset status
+            const topbarStatus = document.getElementById('topbar-dataset-status');
+            if (topbarStatus && summary.recordsProcessed) {
+                topbarStatus.textContent = 'Spark Dataset: ' + Number(summary.recordsProcessed).toLocaleString() + ' records';
+            }
         } catch (error) {
             console.error('Reset failed:', error);
+            alert('Reset failed: ' + error.message);
         }
     },
 
