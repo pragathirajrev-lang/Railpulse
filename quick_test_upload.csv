@@ -1,0 +1,6 @@
+record_id,train_id,train_name,source_station,destination_station,travel_date,passenger_count,train_capacity,delay_minutes,distance_km,day_of_week,month,train_category
+REC-99001,TR-20607,Vande Bharat Express,Chennai,Mysuru,2024-12-31,1150,1228,5,500,Tuesday,December,Vande Bharat
+REC-99002,TR-12951,Mumbai Rajdhani,Mumbai,Delhi,2024-12-31,1080,1150,15,1380,Tuesday,December,Rajdhani
+REC-99003,TR-12626,Karnataka Express,Bengaluru,Delhi,2024-12-31,1210,1250,22,2400,Tuesday,December,Superfast
+REC-99004,TR-12007,Shatabdi Express,Chennai,Bengaluru,2024-12-31,890,950,8,360,Tuesday,December,Shatabdi
+REC-99005,TR-12123,Deccan Queen,Mumbai,Pune,2024-12-31,940,1000,4,190,Tuesday,December,Superfast
